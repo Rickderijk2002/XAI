@@ -22,7 +22,7 @@ An interactive Streamlit application for running a structured human evaluation s
 
 The data is **not included** in this repository due to confidentiality (paper under review). You need to set it up manually.
 
-Create a `Data/` folder in the project root with the following structure:
+Create a `Data/` folder in the project root `Dashboard` with the following structure:
 
 ```
 Data/

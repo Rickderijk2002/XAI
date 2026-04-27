@@ -1,0 +1,28 @@
+[
+  {
+    "player_name": "Gilbert",
+    "timestamp": 1777213841.4648678,
+    "network": "mnist_output_100",
+    "instance_id": 43,
+    "target": 3,
+    "original_label": 4,
+    "shown_method_steps_1_2": "C-Min-Edit",
+    "step1_judgment": "No, not successful",
+    "step1_why": "more a 1",
+    "step2_validity_estimate": 0.67,
+    "step2_plausibility_estimate": 0.5,
+    "step3_best_method": "alibi-Proto-CF",
+    "step3_confidence": 60,
+    "step4_actual_correctness": 1,
+    "step4_actual_IM1": 1.2755135379465528,
+    "step4_actual_implausibility": 0.6104050138939203,
+    "step5_why_chosen": "",
+    "step5_actual_best_method": "alibi-Proto-CF",
+    "step6_best_overall": "alibi-Proto-CF",
+    "step6_best_plausible": "alibi-CF",
+    "step6_best_valid": "PIECE",
+    "step7_post_confidence": 70,
+    "step7_change_answer": "Yes",
+    "step7_final_thoughts": ""
+  }
+]
