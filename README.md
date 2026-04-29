@@ -10,11 +10,56 @@ An interactive Streamlit application for running a structured human evaluation s
 
 ## Project Structure
 
-| File             | Description                                                              |
-| ---------------- | ------------------------------------------------------------------------ |
-| `app.py`         | Main Streamlit application (Guided Task Mode + Game Results)             |
-| `data_utils.py`  | Data loading utilities, image loaders, tension case finder               |
-| `game_log.json`  | Auto-generated file storing all completed user study sessions            |
+Current repository layout:
+
+```text
+XAI/
+├── README.md
+├── requirements.txt
+├── src/
+│   ├── app.py
+│   ├── components.py
+│   ├── data_utils.py
+│   ├── intro.py
+│   ├── task.py
+│   ├── minigame.py
+│   ├── leaderboard.py
+│   ├── results.py
+│   ├── guided_task_results.json
+│   └── minigame_log.json
+├── Dashboard/
+│   ├── app.py
+│   ├── data_utils.py
+│   └── game_log.json
+├── Game Results/
+│   ├── guided_task_results.json
+│   └── minigame_log.json
+└── Report/
+    ├── Report XAI.qmd
+    ├── DliA_Final_Report.qmd
+    └── My_Library.bib
+```
+
+### `src/` module overview
+
+| File | Description |
+| --- | --- |
+| `src/app.py` | Main Streamlit entry point. Handles sidebar navigation and routes to Guided Task, Mini Game, Leaderboard, and Guided Task Results pages. |
+| `src/components.py` | Shared UI/style utilities (CSS injection, metric explainer, image rendering, formatting helpers) used across pages. |
+| `src/data_utils.py` | Data layer: CSV loading, MNIST/CIFAR tensor loading, metric row lookup, and helper functions for summary/grid generation. |
+| `src/intro.py` | Intro/onboarding screen for the Guided Task flow (study explanation + participant name input). |
+| `src/task.py` | Full 7-step guided study workflow, session state handling, case sampling, and persistence to `guided_task_results.json`. |
+| `src/minigame.py` | Standalone MNIST mini game with score/strikes logic and persistence to `minigame_log.json`. |
+| `src/leaderboard.py` | Leaderboard page for mini game sessions stored in `minigame_log.json`. |
+| `src/results.py` | Aggregated analysis page for guided task sessions stored in `guided_task_results.json`. |
+| `src/guided_task_results.json` | Auto-generated storage file for completed guided task sessions. |
+| `src/minigame_log.json` | Auto-generated storage file for mini game sessions. |
+
+### Notes on other folders
+
+- `Dashboard/` contains an earlier monolithic app version kept in the repo.
+- `Game Results/` contains exported/copied result logs.
+- `Report/` contains Quarto report sources and bibliography.
 
 ---
 
@@ -45,8 +90,6 @@ Data/
         └── alibi-CF/
 ```
 
-**Important:** The CIFAR folder contains an extra nested level (`cifar_resnet8_output/cifar_resnet8_output/`). This must be replicated exactly.
-
 ---
 
 ## Installation
@@ -60,7 +103,7 @@ pip install streamlit torch numpy pandas matplotlib
 ## Running the App
 
 ```bash
-streamlit run app.py
+streamlit run src/app.py
 ```
 
 ---
@@ -117,7 +160,14 @@ Displays:
 
 ## Saved Data
 
-All user input from every step is saved as a single JSON entry per completed session in `game_log.json`. Each entry contains:
+The `Game Results/` folder currently contains two JSON logs:
+
+- `Game Results/guided_task_results.json` (one entry per completed Guided Task session)
+- `Game Results/minigame_log.json` (one entry per completed Mini Game session)
+
+### Guided Task JSON (`guided_task_results.json`)
+
+Each entry contains:
 
 | Field | Source |
 | ----- | ------ |
@@ -131,19 +181,39 @@ All user input from every step is saved as a single JSON entry per completed ses
 | `step2_plausibility_estimate` | Slider value (0 to 1) |
 | `step3_best_method` | Game pick (method name) |
 | `step3_confidence` | Confidence percentage |
+| `step3_why_pick` | Required explanation of game pick |
 | `step4_actual_correctness` | Actual validity from CSV |
 | `step4_actual_IM1` | Actual IM1 from CSV |
 | `step4_actual_implausibility` | Actual implausibility from CSV |
+| `step4_surprised_reaction` | Required reaction to revealed metrics |
 | `step5_why_chosen` | Free text explanation |
 | `step5_actual_best_method` | Objectively best method (by metrics) |
-| `step6_best_overall` | Dropdown pick (best overall) |
-| `step6_best_plausible` | Dropdown pick (most plausible) |
-| `step6_best_valid` | Dropdown pick (most valid) |
+| `step5_player_matched` | Whether step-3 pick matched objective best |
+| `step6_would_change_pick` | Whether participant would change their pick |
+| `step6_final_pick` | Final pick after seeing full table |
+| `step6_why_change` | Required explanation of step-6 choice |
+| `step6_per_metric_best_valid` | Methods that were valid on this case |
+| `step6_per_metric_best_im1` | Best method on IM1 |
+| `step6_per_metric_best_implaus` | Best method on implausibility |
+| `step6_per_metric_best_l2` | Best method on L2 distance |
 | `step7_post_confidence` | Post-reveal confidence percentage |
 | `step7_change_answer` | Yes or No |
 | `step7_final_thoughts` | Free text |
 
 Incomplete sessions (where the participant did not reach step 7) are not saved.
+
+### Mini Game JSON (`minigame_log.json`)
+
+Each mini game entry contains:
+
+| Field | Source |
+| ----- | ------ |
+| `player_name` | Name entry screen |
+| `timestamp` | Auto-generated |
+| `score` | Number of correct answers |
+| `strikes` | Number of strikes at game end |
+| `rounds_played` | Total rounds in that game |
+| `history` | Per-round details (`instance_id`, `target`, `method`, `correctness`, `IM1`, `implausibility`, `guess`, `correct`, `round`) |
 
 ---
 
@@ -152,5 +222,5 @@ Incomplete sessions (where the participant did not reach step 7) are not saved.
 - The sidebar shows a reset button to manually clear a session mid-way if needed.
 - The randomly sampled case is consistent across all 7 steps within one session.
 - The method shown in steps 1 and 2 is chosen randomly from whichever methods have a non-blank (non-timeout) CF image available for that case.
-- `game_log.json` is appended to after each completed session and is safe to back up or copy at any time.
+- `Game Results/guided_task_results.json` and `Game Results/minigame_log.json` are appended to after completed sessions and are safe to back up or copy at any time.
 - To export all results as CSV, use the Download button on the Game Results page.
