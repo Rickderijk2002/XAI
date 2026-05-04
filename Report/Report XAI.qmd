@@ -576,4 +576,4 @@ The newer frontend integrated in this report addresses these issues directly. We
 
 ![Compare methods 1.2](images/Compare methods on this case (7.2).png){#fig-compare-methods2}
 
-![Final Though & Confidence](images/Confidence & Final Thoughts (8).png){#fig-conclusion}
+![Archive CF & FT](images/Confidence & Final Thoughts (8).png){#fig-archive-cf}
