@@ -472,43 +472,7 @@ Rather than storing partial rows after each interaction, the guided-task log sto
 
 Only MNIST is used in this study, as handwritten digit recognition provides a simpler and more interpretable visual domain for participants. Digits are easier to judge intuitively, as it is clearer whether a modified image still looks like a recognisable digit. This reduces noise in the human judgments and keeps the focus on the validity and plausibility gap rather than on image complexity. Cases are sampled randomly from MNIST instances that have non-blank CF images available across a sufficient number of methods.
 
-## Prototype Screenshots
-
-**Figure 5.1 - Welcome screen and participant name entry**
-
-*\[Screenshot: Step 0, name entry screen\]*
-
-**Figure 5.2 - Step 1: Visual Inspection**
-
-*\[Screenshot: Original image and one random CF method shown, judgment radio buttons and free-text field visible\]*
-
-**Figure 5.3 - Step 2: Your Prediction**
-
-*\[Screenshot: Same image pair with validity and plausibility sliders\]*
-
-**Figure 5.4 - Step 3: The Game**
-
-*\[Screenshot: Full lineup of all 5 CF methods, method selection radio and confidence slider visible\]*
-
-**Figure 5.5 - Step 4: Actual Metrics Revealed**
-
-*\[Screenshot: Metric comparison panel showing participant estimates vs. actual values\]*
-
-**Figure 5.6 - Step 5: Explanation and Feedback**
-
-*\[Screenshot: Ranked method list and free-text reasoning field\]*
-
-**Figure 5.7 - Step 6: Compare Methods on This Case**
-
-*\[Screenshot: Full image grid with metrics table and three dropdown selectors\]*
-
-**Figure 5.8 - Step 7: Confidence and Final Thoughts**
-
-*\[Screenshot: Post-reveal confidence slider, change-answer radio, and final thoughts text area\]*
-
-**Figure 5.9 - Guided Task Results page**
-
-*\[Screenshot: Aggregate bar charts of method picks, winner badges, qualitative responses panel\]*
+For the full Prototype final version screenshots we reference to the appendix @sec-appendix-final-version-prototype
 
 ### Archive
 
@@ -560,7 +524,39 @@ The newer frontend integrated in this report addresses these issues directly. We
 
 # References
 
-# Appendix Final Version Prototype
+# Appendix Final Version Prototype {#sec-appendix-final-version-prototype}
+
+![HomeScreen 1](images/Final prototype/Home Screen Final Version.png){#fig-homescreen-1}
+
+![Homescreen 2](images/Final prototype/HomeScreen Final Version2.png){#fig-homescreen-2}
+
+![Visual Inspection FV](images/Final prototype/Visual Inspection Final Version.png){#fig-visual-inspec-fv}
+
+![User Prediction FV](images/Final prototype/Your Prediction FV.png){#fig-user-pred-fv}
+
+![The Game](images/Final prototype/The Game FV2.png){#fig-game-fv}
+
+![Actual metrics 1](images/Final prototype/Actual Metrics FV.png){#fig-actual-1}
+
+![Actual metric 2](images/Final prototype/Actual Metrics 2.png){#fig-actual-2}
+
+![Actual metric 3](images/Final prototype/Actual Metrics FV 3.png){#fig-actual metric 3}
+
+![Explanation & Feedback FV 1](images/Final prototype/Explanation & Feedback 1.png)
+
+![Explanation & Feedback 2](images/Final prototype/Explanation & feedback 2.png){#fig-expla-2}
+
+![Compare methods FV 1](images/Final prototype/Compare all methods 1.png)
+
+![Compare methods 2 FV](images/Final prototype/Compare all methods 2.png)
+
+![Compare methods FV 3](images/Final prototype/Compare all methods 3.png)
+
+![Final Thought & Confidence FV 1](images/Confidence & Final Thoughts.png)
+
+![Final Thought & Confidence 2](images/Final prototype/Confidence  & final thoughts 2.png)
+
+![Confidence 3](images/confidence 3.png)
 
 # Appendix Archive Prototype {#sec-appendix-archive-prototype}
 
