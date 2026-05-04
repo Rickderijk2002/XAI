@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.4.17)  4 MAY 2026 15:47
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.5.4)  4 MAY 2026 15:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1350,8 +1350,8 @@ it was not a recognized image format.
 
  
 Here is how much of TeX's memory you used:
- 38072 strings out of 470015
- 794290 string characters out of 5473251
+ 38069 strings out of 470015
+ 794093 string characters out of 5473798
  1474069 words of memory out of 5000000
  66311 multiletter control sequences out of 15000+600000
  632441 words of font info for 78 fonts, out of 8000000 for 9000
