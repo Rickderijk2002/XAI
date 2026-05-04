@@ -542,9 +542,9 @@ The newer frontend integrated in this report addresses these issues directly. We
 
 ![Actual metric 3](images/Final%20prototype/Actual%20Metrics%20FV%203.png){#fig-actual metric 3}
 
-![Explanation & Feedback FV 1](images/Final%20prototype/Explanation%20&%20Feedback%201.png)
+![Explanation & Feedback FV 1](images/Final prototype/Explanation_Feedback 1.png)
 
-![Explanation & Feedback 2](images/Final%20prototype/Explanation%20&%20feedback%202.png){#fig-expla-2}
+![Explanation & Feedback 2](images/Final prototype/Explanation_ feedback_2.png){#fig-expla-2}
 
 ![Compare methods FV 1](images/Final%20prototype/Compare%20all%20methods%201.png)
 
@@ -552,11 +552,21 @@ The newer frontend integrated in this report addresses these issues directly. We
 
 ![Compare methods FV 3](images/Final%20prototype/Compare%20all%20methods%203.png)
 
-![Final Thought & Confidence FV 1](images/Confidence%20&%20Final%20Thoughts.png)
+![CF & Thoughts FV](images/Final prototype/Confidence_Final_ Thoughts.png)
 
-![Final Thought & Confidence 2](images/Final%20prototype/Confidence%20&%20final%20thoughts%202.png)
+![CF Thoughts 2](images/Final prototype/Confidence_final_thoughts 2.png)
 
-![Confidence 3](images/confidence%203.png)
+![Mini-Game Homescreen](images/Final prototype/Mini Game homescreen.png)
+
+![Minigame Information](images/Final prototype/Minigame.png)
+
+![Round Example 1](images/Final prototype/Round 1 (1).png)
+
+![Round Example 2](images/Final prototype/Round 1 (2).png)
+
+![Mini-Game Choice](images/Final prototype/Minigame (3).png)
+
+![Leaderbord](images/Final prototype/Leaderbord.png)
 
 # Appendix Archive Prototype {#sec-appendix-archive-prototype}
 
@@ -564,16 +574,16 @@ The newer frontend integrated in this report addresses these issues directly. We
 
 ![Visual Inspection](images/Archive/Visual-Inspection.png){#fig-visual}
 
-![User Prediction](images/Archive/Your prediciton (3).png){#fig-prediction-users}
+![User Prediction](images/Archive/Your%20prediciton%20(3).png){#fig-prediction-users}
 
-![The Game](images/Archive/Game choose the best explanation(4).png){#fig-game}
+![The Game](images/Archive/Game%20choose%20the%20best%20explanation(4).png){#fig-game}
 
-![Actual Metrics](images/Archive/Actual Metrics (5).png){#fig-metrics}
+![Actual Metrics](images/Archive/Actual%20Metrics%20(5).png){#fig-metrics}
 
-![Explanation & Feedback](images/Archive/Explanation & Feedback (6).png)
+![Explanation & Feedback](images/Archive/Explanation%20&%20Feedback%20(6).png)
 
-![Compare methods 1.1](images/Archive/Compare methods on this case (7.1).png){#fig-compare-methods1}
+![Compare methods 1.1](images/Archive/Compare%20methods%20on%20this%20case%20(7.1).png){#fig-compare-methods1}
 
-![Compare methods 1.2](images/Archive/Compare methods on this case (7.2).png){#fig-compare-methods2}
+![Compare methods 1.2](images/Archive/Compare%20methods%20on%20this%20case%20(7.2).png){#fig-compare-methods2}
 
 ![Archive CF & FT](images/Archive/CF.png){#fig-archive-cf}
