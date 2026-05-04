@@ -550,6 +550,16 @@ The Guided Task Mode was developed as a replacement to address the limitations o
 
 ## Archive Overview
 
+This archive documents the first complete front-end prototype we built for the XAI study: an interactive Streamlit dashboard that translated our evaluation pipeline into a participant-facing experience. The goal of this version was to make the study flow testable from end to end and to verify that participants could compare counterfactual explanations in a structured way.
+
+The prototype was implemented in `Dashboard/app.py`, with data and image handling in `Dashboard/data_utils.py`. It combined model outputs from MNIST and CIFAR-10, loaded original and counterfactual images, and guided participants through a step-by-step interaction sequence: visual judgment, metric estimation, method comparison, and final reflection. This structure was useful because it let us observe how judgments changed before and after metric information was revealed.
+
+A key contribution of this V1 frontend was the integration of quantitative and qualitative feedback in one flow. Participants gave confidence and plausibility estimates, selected the method they considered best, and provided short written explanations for their choices. After each session, responses were automatically stored in `game_log.json`, which enabled efficient analysis without manual data collection. The dashboard also included a results page for quick aggregation checks (e.g., method preferences and confidence distributions), which helped us validate that logging and comparison logic worked during early testing.
+
+At the same time, this archived version had usability limitations that motivated the redesign. Although metrics were shown, users often did not understand what those metrics meant, why they were included, or how to interpret high and low values. In addition, the interaction flow was not always intuitive: participants were asked in later steps (such as Step 7) to reflect on early choices from Step 1, but without enough in-context reminders this felt less user-friendly.
+
+The newer frontend integrated in this report addresses these issues directly. We added clearer explanations of each metric (what it represents, why it matters, and how to interpret it), improved page-level instructions, and introduced repeated context and information cues so users consistently understand what they need to do on each screen. In that sense, the V1 archive remains an important bridge: it established the core interaction logic and data pipeline, while also making clear which design improvements were necessary for a better user experience.
+
 # Appendix
 
 # References
