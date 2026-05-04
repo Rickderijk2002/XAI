@@ -526,54 +526,54 @@ The newer frontend integrated in this report addresses these issues directly. We
 
 # Appendix Final Version Prototype {#sec-appendix-final-version-prototype}
 
-![HomeScreen 1](images/Final prototype/Home Screen Final Version.png){#fig-homescreen-1}
+![HomeScreen 1](images/Final%20prototype/Home%20Screen%20Final%20Version.png){#fig-homescreen-1}
 
-![Homescreen 2](images/Final prototype/HomeScreen Final Version2.png){#fig-homescreen-2}
+![Homescreen 2](images/Final%20prototype/HomeScreen%20Final%20Version2.png){#fig-homescreen-2}
 
-![Visual Inspection FV](images/Final prototype/Visual Inspection Final Version.png){#fig-visual-inspec-fv}
+![Visual Inspection FV](images/Final%20prototype/Visual%20Inspection%20Final%20Version.png){#fig-visual-inspec-fv}
 
-![User Prediction FV](images/Final prototype/Your Prediction FV.png){#fig-user-pred-fv}
+![User Prediction FV](images/Final%20prototype/Your%20Prediction%20FV.png){#fig-user-pred-fv}
 
-![The Game](images/Final prototype/The Game FV2.png){#fig-game-fv}
+![The Game](images/Final%20prototype/The%20Game%20FV2.png){#fig-game-fv}
 
-![Actual metrics 1](images/Final prototype/Actual Metrics FV.png){#fig-actual-1}
+![Actual metrics 1](images/Final%20prototype/Actual%20Metrics%20FV.png){#fig-actual-1}
 
-![Actual metric 2](images/Final prototype/Actual Metrics 2.png){#fig-actual-2}
+![Actual metric 2](images/Final%20prototype/Actual%20Metrics%202.png){#fig-actual-2}
 
-![Actual metric 3](images/Final prototype/Actual Metrics FV 3.png){#fig-actual metric 3}
+![Actual metric 3](images/Final%20prototype/Actual%20Metrics%20FV%203.png){#fig-actual metric 3}
 
-![Explanation & Feedback FV 1](images/Final prototype/Explanation & Feedback 1.png)
+![Explanation & Feedback FV 1](images/Final%20prototype/Explanation%20&%20Feedback%201.png)
 
-![Explanation & Feedback 2](images/Final prototype/Explanation & feedback 2.png){#fig-expla-2}
+![Explanation & Feedback 2](images/Final%20prototype/Explanation%20&%20feedback%202.png){#fig-expla-2}
 
-![Compare methods FV 1](images/Final prototype/Compare all methods 1.png)
+![Compare methods FV 1](images/Final%20prototype/Compare%20all%20methods%201.png)
 
-![Compare methods 2 FV](images/Final prototype/Compare all methods 2.png)
+![Compare methods 2 FV](images/Final%20prototype/Compare%20all%20methods%202.png)
 
-![Compare methods FV 3](images/Final prototype/Compare all methods 3.png)
+![Compare methods FV 3](images/Final%20prototype/Compare%20all%20methods%203.png)
 
-![Final Thought & Confidence FV 1](images/Confidence & Final Thoughts.png)
+![Final Thought & Confidence FV 1](images/Confidence%20&%20Final%20Thoughts.png)
 
-![Final Thought & Confidence 2](images/Final prototype/Confidence  & final thoughts 2.png)
+![Final Thought & Confidence 2](images/Final%20prototype/Confidence%20&%20final%20thoughts%202.png)
 
-![Confidence 3](images/confidence 3.png)
+![Confidence 3](images/confidence%203.png)
 
 # Appendix Archive Prototype {#sec-appendix-archive-prototype}
 
-![Homescreen](images/Filling_in_name.png){#fig-home width="1694"}
+![Homescreen](images/Archive/Filling_in_name.png){#fig-home}
 
-![Visual Inspection](images/Visual-Inspection.png){#fig-visual}
+![Visual Inspection](images/Archive/Visual-Inspection.png){#fig-visual}
 
-![User Prediction](images/Your prediciton (3).png){#fig-prediction-users}
+![User Prediction](images/Archive/Your prediciton (3).png){#fig-prediction-users}
 
-![The Game](images/Game choose the best explanation(4).png){#fig-game}
+![The Game](images/Archive/Game choose the best explanation(4).png){#fig-game}
 
-![Actual Metrics](images/Actual Metrics (5).png){#fig-metrics}
+![Actual Metrics](images/Archive/Actual Metrics (5).png){#fig-metrics}
 
-![Explanation & Feedback](images/Explanation & Feedback (6).png)
+![Explanation & Feedback](images/Archive/Explanation & Feedback (6).png)
 
-![Compare methods 1.1](images/Compare methods on this case (7.1).png){#fig-compare-methods1}
+![Compare methods 1.1](images/Archive/Compare methods on this case (7.1).png){#fig-compare-methods1}
 
-![Compare methods 1.2](images/Compare methods on this case (7.2).png){#fig-compare-methods2}
+![Compare methods 1.2](images/Archive/Compare methods on this case (7.2).png){#fig-compare-methods2}
 
-![Archive CF & FT](images/Confidence & Final Thoughts (8).png){#fig-archive-cf}
+![Archive CF & FT](images/Archive/CF.png){#fig-archive-cf}
