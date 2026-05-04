@@ -558,8 +558,26 @@ At the same time, this archived version had usability limitations that motivated
 
 The newer frontend integrated in this report addresses these issues directly. We added clearer explanations of each metric (what it represents, why it matters, and how to interpret it), improved page-level instructions, and introduced repeated context and information cues so users consistently understand what they need to do on each screen. In that sense, the V1 archive remains an important bridge: it established the core interaction logic and data pipeline, while also making clear which design improvements were necessary for a better user experience. For the full prototype archive see figures 1 to 8 in @sec-appendix-archive-prototype
 
+# References
+
 # Appendix Final Version Prototype
 
 # Appendix Archive Prototype {#sec-appendix-archive-prototype}
 
-# References
+![Homescreen](images/Filling_in_name.png){#fig-home width="1694"}
+
+![Visual Inspection](images/Visual-Inspection.png){#fig-visual}
+
+![User Prediction](images/Your prediciton (3).png){#fig-prediction-users}
+
+![The Game](images/Game choose the best explanation(4).png){#fig-game}
+
+![Actual Metrics](images/Actual Metrics (5).png){#fig-metrics}
+
+![Explanation & Feedback](images/Explanation & Feedback (6).png)
+
+![Compare methods 1.1](images/Compare methods on this case (7.1).png){#fig-compare-methods1}
+
+![Compare methods 1.2](images/Compare methods on this case (7.2).png){#fig-compare-methods2}
+
+![Final Though & Confidence](images/Confidence & Final Thoughts (8).png){#fig-conclusion}

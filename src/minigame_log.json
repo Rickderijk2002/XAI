@@ -1,0 +1,77 @@
+[
+  {
+    "player_name": "Rick",
+    "timestamp": 1777901363.4269447,
+    "score": 1,
+    "strikes": 2,
+    "rounds_played": 3,
+    "history": [
+      {
+        "instance_id": 55,
+        "target": 1,
+        "method": "alibi-Proto-CF",
+        "correctness": 1,
+        "IM1": 16.82801760890134,
+        "implausibility": 0.7478853012253104,
+        "guess": 1,
+        "correct": true,
+        "round": 1
+      },
+      {
+        "instance_id": 55,
+        "target": 1,
+        "method": "alibi-Proto-CF",
+        "correctness": 1,
+        "IM1": 16.82801760890134,
+        "implausibility": 0.7478853012253104,
+        "guess": 1,
+        "correct": true,
+        "round": 1
+      },
+      {
+        "instance_id": 96,
+        "target": 0,
+        "method": "Min-Edit",
+        "correctness": 1,
+        "IM1": 1.0032026243107324,
+        "implausibility": 0.5486758812299469,
+        "guess": 0,
+        "correct": false,
+        "round": 2
+      },
+      {
+        "instance_id": 96,
+        "target": 0,
+        "method": "Min-Edit",
+        "correctness": 1,
+        "IM1": 1.0032026243107324,
+        "implausibility": 0.5486758812299469,
+        "guess": 0,
+        "correct": false,
+        "round": 2
+      },
+      {
+        "instance_id": 9,
+        "target": 3,
+        "method": "C-Min-Edit",
+        "correctness": 1,
+        "IM1": 0.7820861466398215,
+        "implausibility": 0.6127895574893418,
+        "guess": 0,
+        "correct": false,
+        "round": 3
+      },
+      {
+        "instance_id": 9,
+        "target": 3,
+        "method": "C-Min-Edit",
+        "correctness": 1,
+        "IM1": 0.7820861466398215,
+        "implausibility": 0.6127895574893418,
+        "guess": 0,
+        "correct": false,
+        "round": 3
+      }
+    ]
+  }
+]
