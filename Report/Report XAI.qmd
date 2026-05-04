@@ -474,8 +474,6 @@ Only MNIST is used in this study, as handwritten digit recognition provides a si
 
 ## Prototype Screenshots
 
-> **Note:** Screenshots to be added. For each step, run the dashboard with real data, complete the flow, and capture a screenshot. Label each image as indicated below.
-
 **Figure 5.1 - Welcome screen and participant name entry**
 
 *\[Screenshot: Step 0, name entry screen\]*
@@ -558,8 +556,10 @@ A key contribution of this V1 frontend was the integration of quantitative and q
 
 At the same time, this archived version had usability limitations that motivated the redesign. Although metrics were shown, users often did not understand what those metrics meant, why they were included, or how to interpret high and low values. In addition, the interaction flow was not always intuitive: participants were asked in later steps (such as Step 7) to reflect on early choices from Step 1, but without enough in-context reminders this felt less user-friendly.
 
-The newer frontend integrated in this report addresses these issues directly. We added clearer explanations of each metric (what it represents, why it matters, and how to interpret it), improved page-level instructions, and introduced repeated context and information cues so users consistently understand what they need to do on each screen. In that sense, the V1 archive remains an important bridge: it established the core interaction logic and data pipeline, while also making clear which design improvements were necessary for a better user experience.
+The newer frontend integrated in this report addresses these issues directly. We added clearer explanations of each metric (what it represents, why it matters, and how to interpret it), improved page-level instructions, and introduced repeated context and information cues so users consistently understand what they need to do on each screen. In that sense, the V1 archive remains an important bridge: it established the core interaction logic and data pipeline, while also making clear which design improvements were necessary for a better user experience. For the full prototype archive see figures 1 to 8 in @sec-appendix-archive-prototype
 
-# Appendix
+# Appendix Final Version Prototype
+
+# Appendix Archive Prototype {#sec-appendix-archive-prototype}
 
 # References
