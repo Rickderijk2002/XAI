@@ -73,5 +73,146 @@
         "round": 3
       }
     ]
+  },
+  {
+    "player_name": "agga",
+    "timestamp": 1778070610.8252416,
+    "score": 4,
+    "strikes": 2,
+    "rounds_played": 6,
+    "history": [
+      {
+        "instance_id": 17,
+        "target": 2,
+        "method": "Min-Edit",
+        "correctness": 1,
+        "IM1": 1.1269985188148703,
+        "implausibility": 0.5681825482740033,
+        "guess": 1,
+        "correct": true,
+        "round": 1
+      },
+      {
+        "instance_id": 17,
+        "target": 2,
+        "method": "Min-Edit",
+        "correctness": 1,
+        "IM1": 1.1269985188148703,
+        "implausibility": 0.5681825482740033,
+        "guess": 1,
+        "correct": true,
+        "round": 1
+      },
+      {
+        "instance_id": 65,
+        "target": 9,
+        "method": "PIECE",
+        "correctness": 1,
+        "IM1": 0.9700874791732516,
+        "implausibility": 0.6368345640877204,
+        "guess": 1,
+        "correct": true,
+        "round": 2
+      },
+      {
+        "instance_id": 65,
+        "target": 9,
+        "method": "PIECE",
+        "correctness": 1,
+        "IM1": 0.9700874791732516,
+        "implausibility": 0.6368345640877204,
+        "guess": 1,
+        "correct": true,
+        "round": 2
+      },
+      {
+        "instance_id": 60,
+        "target": 3,
+        "method": "Min-Edit",
+        "correctness": 1,
+        "IM1": 0.9858318813521716,
+        "implausibility": 0.5513465760423405,
+        "guess": 1,
+        "correct": true,
+        "round": 3
+      },
+      {
+        "instance_id": 60,
+        "target": 3,
+        "method": "Min-Edit",
+        "correctness": 1,
+        "IM1": 0.9858318813521716,
+        "implausibility": 0.5513465760423405,
+        "guess": 1,
+        "correct": true,
+        "round": 3
+      },
+      {
+        "instance_id": 84,
+        "target": 9,
+        "method": "alibi-Proto-CF",
+        "correctness": 1,
+        "IM1": 1.5295470500678998,
+        "implausibility": 0.1008396463789346,
+        "guess": 1,
+        "correct": true,
+        "round": 4
+      },
+      {
+        "instance_id": 84,
+        "target": 9,
+        "method": "alibi-Proto-CF",
+        "correctness": 1,
+        "IM1": 1.5295470500678998,
+        "implausibility": 0.1008396463789346,
+        "guess": 1,
+        "correct": true,
+        "round": 4
+      },
+      {
+        "instance_id": 51,
+        "target": 3,
+        "method": "Min-Edit",
+        "correctness": 1,
+        "IM1": 0.936290740894094,
+        "implausibility": 0.1869964395002706,
+        "guess": 0,
+        "correct": false,
+        "round": 5
+      },
+      {
+        "instance_id": 51,
+        "target": 3,
+        "method": "Min-Edit",
+        "correctness": 1,
+        "IM1": 0.936290740894094,
+        "implausibility": 0.1869964395002706,
+        "guess": 0,
+        "correct": false,
+        "round": 5
+      },
+      {
+        "instance_id": 28,
+        "target": 1,
+        "method": "PIECE",
+        "correctness": 1,
+        "IM1": 8.420764662543993,
+        "implausibility": 0.5639781931885982,
+        "guess": 0,
+        "correct": false,
+        "round": 6
+      },
+      {
+        "instance_id": 28,
+        "target": 1,
+        "method": "PIECE",
+        "correctness": 1,
+        "IM1": 8.420764662543993,
+        "implausibility": 0.5639781931885982,
+        "guess": 0,
+        "correct": false,
+        "round": 6
+      }
+    ]
   }
 ]

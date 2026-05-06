@@ -1,2 +1,6 @@
 /Data/
 /Dashboard/Data/
+/__pycache__
+/_pycache_
+/.venv
+/.conda
