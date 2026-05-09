@@ -85,7 +85,7 @@ Importantly, this method surfaced both preliminary insights and open questions, 
 
 During the workshop, potential user groups were identified and refined. The primary user group was defined as data science students, while machine learning researchers were considered a secondary group.
 
-![User groups identified during the workshop](images/ideation_2.jpeg){width="436"}
+![User groups identified during the workshop](images/ideation_1_users.jpeg){width="225"}
 
 Data science students are expected to have a basic understanding of machine learning concepts but limited experience with evaluating explanation quality. They may therefore rely more strongly on visual intuition and may not fully understand the implications of different evaluation metrics.
 
@@ -227,9 +227,9 @@ Following the define phase, the ideation phase focused on exploring a broad rang
 
 To ensure sufficient divergence, a structured brainwriting session was conducted. Each team member independently generated ideas before sharing them with the group. This approach reduced the risk of early convergence on familiar solutions and encouraged the exploration of alternative interaction patterns.
 
-![Brainwriting session showing a wide range of alternative dashboard concepts](images/ideation_3.jpeg){#fig-brainwriting2 width="453"}
+![Brainwriting session showing a wide range of alternative dashboard concepts](images/ideation_2.jpeg){#fig-brainwriting2 width="453"}
 
-Figure @fig-brainwriting2 illustrates the divergence phase. The variety of post-it notes reflects multiple directions, including dashboard-based exploration, metric-driven evaluation, comparison views, and more structured interaction flows.
+@fig-brainwriting2 illustrates the divergence phase. The variety of post-it notes reflects multiple directions, including dashboard-based exploration, metric-driven evaluation, comparison views, and more structured interaction flows.
 
 Ideas were intentionally not evaluated during the initial generation phase. This allowed both conventional and more experimental concepts to emerge before introducing selection criteria.
 
