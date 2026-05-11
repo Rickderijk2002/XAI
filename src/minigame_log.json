@@ -967,5 +967,58 @@
         "round": 26
       }
     ]
+  },
+  {
+    "player_name": "Thom",
+    "timestamp": 1778505381.5981922,
+    "score": 0,
+    "strikes": 2,
+    "rounds_played": 2,
+    "history": [
+      {
+        "instance_id": 49,
+        "target": 8,
+        "method": "C-Min-Edit",
+        "correctness": 1,
+        "IM1": 1.3926653159331617,
+        "implausibility": 0.5278480225966887,
+        "guess": 0,
+        "correct": false,
+        "round": 1
+      },
+      {
+        "instance_id": 49,
+        "target": 8,
+        "method": "C-Min-Edit",
+        "correctness": 1,
+        "IM1": 1.3926653159331617,
+        "implausibility": 0.5278480225966887,
+        "guess": 0,
+        "correct": false,
+        "round": 1
+      },
+      {
+        "instance_id": 1,
+        "target": 0,
+        "method": "alibi-Proto-CF",
+        "correctness": 1,
+        "IM1": 1.3713130330476329,
+        "implausibility": 0.0406512143074066,
+        "guess": 0,
+        "correct": false,
+        "round": 2
+      },
+      {
+        "instance_id": 1,
+        "target": 0,
+        "method": "alibi-Proto-CF",
+        "correctness": 1,
+        "IM1": 1.3713130330476329,
+        "implausibility": 0.0406512143074066,
+        "guess": 0,
+        "correct": false,
+        "round": 2
+      }
+    ]
   }
 ]

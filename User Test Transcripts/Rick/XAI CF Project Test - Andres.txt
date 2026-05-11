@@ -1,0 +1,498 @@
+Yeah, perfect. Good.
+
+So,
+
+If possible, you can also just say stuff out loud.
+
+Capture something.
+
+So now I have to just measure some, the validity of the model, I guess.
+
+I don't know exactly how to maybe measure that and directly to the CF followed by the
+
+CF which is something that I don't know what it is.
+
+It could be counterfactual.
+
+So let's just try this and the validity and the plausibility.
+
+How realistic does the CF look to you?
+
+So unrealistic disorder, one very realistic and natural.
+
+Maybe, yeah, if you are going to like put some percentage, let's say, it's quite difficult
+
+to say exactly how precise it is, but more or less like this.
+
+How should I pick the best method?
+
+So here I can see all the methods.
+
+Consider two things.
+
+Does it still look like a realistic digital image?
+
+How confident are you in this course?
+
+Which one do you think is the most successful?
+
+So, I would
+
+And there is one model that is not showing anything.
+
+Right?
+
+And also, I'll be okay.
+
+and this one goes like every 5%
+
+right like 80, 85, 90
+
+so it could be at least easier
+
+tell us why you made this choice
+
+(typing)
+
+Okay, so.
+
+So what do this metric means?
+
+Validity, correctness, correctness, plausibility.
+
+So metrics, I believe I cannot ask you right?
+
+Nothing.
+
+Okay.
+
+So, metrics, counterfactual, validity, actual value, value the model was successful, followed
+
+by the counterfactual, estimate, match, intuition, point in the right direction.
+
+Perhuman estimate or?
+
+Okay, good.
+
+It's below one dataset medium, close to the red string data.
+
+[ Inaudible ]
+
+Were you surprised by the actual metrics?
+
+[ Inaudible ]
+
+36.
+
+[ Inaudible ]
+
+th
+
+The thing is that I don't understand to all these two metrics, right?
+
+Yep.
+
+Implausibility score and IM2 L2 distance.
+
+Yeah, you can.
+
+What you think, I think just fill in here.
+
+Okay.
+
+And then, if you feel like you can continue.
+
+[ Background noise ]
+
+You pick match the OGT pass method.
+
+So what does this mean?
+
+That it was the answer correct or not?
+
+I can't tell you.
+
+Okay.
+
+So.
+
+Because this was what I thought, what I check.
+
+And here.
+
+is saying that it matches the objectively best method. But here it says method 5 is
+
+invalid. So that maybe confused me.
+
+Which confusion part is?
+
+That it says invalid in here.
+
+Which one? Yeah, that...
+
+Okay, well...
+
+You know, maybe for me.
+
+But specifically that method says...
+
+Yeah.
+
+In comparison to your pick
+
+Yeah, I don't know it's see see mean maybe okay
+
+I don't know what this is for.
+
+(background noise
+
+[
+
+th
+
+th
+
+th
+
+th
+
+th
+
+(keyboard
+
+I think that's the inspiration.
+
+and you have seen the full rank and sum matrix does your initial judgment hold up or are you surprised by any other result?
+
+Now
+
+So before you give your final rating here's a full recap of your joining through this case
+
+This looks also quite similar than the previous section in terms of results or...
+
+All right, maybe this one is a bit more specific, but still...
+
+Okay, actual matrix.
+
+So how can I compare like because here my metrics were validity 0.81 and here is only
+
+one.
+
+How can I compare this like is it good or not good?
+
+And then Plowsibility estimate 0.6, which is different, I guess, compared with the implowsibility.
+
+So it's in the other direction, right?
+
+Yep.
+
+But I don't understand also if it's correct or not.
+
+Overall, best method.
+
+The metrics you pick match the objectively best method.
+
+So will you change?
+
+No.
+
+Now give your final confidence rating and thoughts confident are you near step one judgment?
+
+Step one answer
+
+th
+
+(
+
+Yeah, perfect. Okay, thank you.
+
+My pleasure.
+
+Okay, yeah, now I can intervene because during these steps I couldn't talk, of course, because
+
+I'm just curious how you interpreted everything.
+
+Okay.
+
+But let's cover some questions.
+
+So the first step you selected the, was it like clear what you needed to do?
+
+It was clear, yes.
+
+But of course, because I'm lacking of maybe some information or you know, definitions
+
+and content and stuff.
+
+So I missed some extra let's say content maybe.
+
+Because what would you want it to...
+
+Well the image and yeah the step by step was maybe clear.
+
+But I didn't understand actually the methods.
+
+So I didn't know what, what one method, what may be better or what was the difference between
+
+each method.
+
+So that I can say, okay, maybe this one is going to be better than the other one.
+
+So really trying to really figure out what is the difference between all of these.
+
+Yes.
+
+So that's maybe something that I missed.
+
+Yeah.
+
+No, yeah.
+
+I think you have these different methods, but the goal, at least for this front end,
+
+is not that you per se are able to know exactly how these different methods work.
+
+Because that's like a whole technical concept of how these work.
+
+Right.
+
+But it's more really to show how good these different methods are compared to each other.
+
+Okay, but at the end, in the dashboard, they're asking you about these methods, right?
+
+Yeah, yeah, yeah.
+
+So, then it's, yeah, okay.
+
+So you need some, maybe, information to choose if you don't know them.
+
+How can you say that this one is better than the other one?
+
+Otherwise, it's confusing.
+
+Yeah.
+
+Yeah.
+
+Okay.
+
+And about the metrics, did you understand a bit what they meant?
+
+Yeah, the metrics, yes, I think that helps me a little bit more to perceive how each
+
+methods can maybe target better the outcome because it's quantified
+
+you know with numbers so it's maybe easier. And like after you did this is
+
+there what's the main thing you get out of it? What is the main thing that
+
+Now that you've gone through all the steps, what is the main thing you would remember?
+
+So, it's that the model or the method could have better prediction if the picture is more realistic
+
+and the number is as close as possible to the target that you want to get.
+
+This is what I understand. I can't be wrong, right?
+
+But this is what I understand from...
+
+So I've cleared a picture of the model.
+
+Exactly.
+
+But you will get out of this.
+
+Exactly.
+
+Okay.
+
+Exactly.
+
+Did you see anything surprising or...?
+
+That some pictures were not too realistic.
+
+So you can tell that maybe they were drawing on the computer or something.
+
+So yeah, you can say, okay, these ones are not realistic and the other ones are more.
+
+And also when you are drawing number four and six, they're kind of like also similar.
+
+So for me, that's also maybe a way to say that the model can achieve that.
+
+Yeah, actually, yeah.
+
+You know, to predict that it's gonna be like that.
+
+But if you compare, or like one and seven as well, they are very similar.
+
+But I don't know.
+
+Okay, yeah.
+
+And like, was it clear to you the difference between your judgment on a counterfactual image
+
+and what the model actually, if the model actually predicts it or not?
+
+Was that something you got out of it?
+
+Not to be honest. No.
+
+No.
+
+I didn't get that part.
+
+What do you think you would need for that?
+
+Maybe...
+
+I would say that
+
+a little process,
+
+step by step, maybe you know two three or some steps and how this model
+
+goes from the beginning to the end and how the model just
+
+creates this workflow. Instead of like the first step just showing the two.
+
+Yes exactly. And it's more vague. Yeah exactly. Okay so because you actually
+
+don't know how how is what's the the path or the journey that the model is
+
+is following yeah so it goes from one point to the order okay yeah but what is
+
+in between yeah exactly yeah so for me it would be good to maybe see you know
+
+two three steps in between yeah to say okay maybe he adds something here he
+
+include something there and then that's why he got to that point.
+
+Okay, good.
+
+And then just the final one, more about...
+
+Because now it's the concept of current factures a bit clearer to you.
+
+And just want to have feedback on what you think of this, of the design and the steps you needed to follow.
+
+And like more on how it was structured visually for you.
+
+if it was what was good what was not so good etc.
+
+I think that the whole structure was like very clear straightforward
+
+perhaps I would maybe know and yeah and the notes on top were also clear some
+
+questions I didn't find it easier like where yeah like what they're asking me
+
+here in order to select and I yeah maybe the first the first part of it I was a
+
+bit lost in order to yeah like what is actually going to be the end or where do
+
+you want to go, right? So I didn't know exactly what you were studying, what was
+
+the question about or what do you want to understand from the process.
+
+So maybe it creates bias if you tell the user and I understand that, which is
+
+like also good but yeah I think yeah I think it could be a little bit more
+
+let's say expressive yes yeah yeah yeah because our main objective is to like
+
+teach someone a bit about the counterfactual topic but also especially
+
+highlight the plausibility, validity, tension. So the fact that you see it
+
+a counterfactual image, to you it looks like the target. For example the
+
+target is 2, you see can clearly see a 2 in it, but then the model behind it
+
+didn't predict 2. If you are like why did the model didn't succeed?
+
+Because I can clearly see it 2 myself. But also the other way around
+
+that the target isn't 2 and you don't see a 2 at all, but the model
+
+it in predicting it too. Like these two things that is what we also tried to
+
+really teach you but did it come over or not?
+
+It caused, yeah it caught my attention that the target was different
+
+than the actual number and how the model can just get to that point.
+
+And why do you think? Because also after the test I asked you what is your like
+
+finding or what stands out. This didn't come up front. Why do you think that is?
+
+If you talk also about the design. I would say maybe to prove the opposite of
+
+the of the contra-fogtro metro I guess so just to say that the model can not
+
+effectively predict the the top the yeah the real picture I would say so yeah
+
+that it can have like a lot of mistakes during the prediction.
+
+Yeah, because do you think like in the what you went through step by step thing,
+
+should something be changed in there such that it would help you visualizing this
+
+plausibility, validity, tension, like this confusion between what you see and what the model predicts?
+
+Or did it actually was quite clear in the design?
+
+No, of course not. It was not quite clear.
+
+No. And why?
+
+Because there's not explanation about the model or the method.
+
+And yeah, you actually don't know how the method process the information.
+
+And also, yeah, well, the data set, I think it doesn't matter, maybe too much.
+
+And so, or how much data does it need?
+
+Yeah, so, yeah.
+
+To be more, to increase the probability of predict that.
+
+So, yeah, it was, of course, not too clear for me.
+
+Yeah, you were mainly focusing on all these methods and how they work and what the metrics
+
+with these methods, how that like what story that tells to you.
+
+Yeah.
+
+And then why is this method better than the other and what exactly is this method doing?
+
+That was...
+
+Exactly.
+
+Okay, so that was me.
+
+Okay.
+
+Exactly.
+
+Okay, perfect. Thank you.
+
+Yeah, we're there.
+
+Thank you.
+
+And what happened with the game?
+
+The game.
+
+the mini game oh that's not part of ah that's just something we want to do at
+
+the design market oh yeah I see I see I thought it was going to also to be part
+
+of it no let me did it now oh I think
+
+I have no idea how we have this.
+

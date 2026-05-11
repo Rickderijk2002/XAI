@@ -13,20 +13,29 @@ import matplotlib.pyplot as plt
 
 # ── Paths ────────────────────────────────────────────────────────────────────
 BASE = os.path.join(os.path.dirname(__file__), "Data")
-MNIST_PATH  = os.path.join(BASE, "mnist_output")
+MNIST_PATH = os.path.join(BASE, "mnist_output")
 # CIFAR has a nested folder
-CIFAR_PATH  = os.path.join(BASE, "cifar_resnet8_output", "cifar_resnet8_output")
-CSV_PATH    = os.path.join(BASE, "evaluation_results.csv")
+CIFAR_PATH = os.path.join(BASE, "cifar_resnet8_output", "cifar_resnet8_output")
+CSV_PATH = os.path.join(BASE, "evaluation_results.csv")
 
 METHODS = ["PIECE", "Min-Edit", "C-Min-Edit", "alibi-Proto-CF", "alibi-CF"]
 CIFAR_LABELS = {
-    0: "airplane", 1: "automobile", 2: "bird", 3: "cat", 4: "deer",
-    5: "dog", 6: "frog", 7: "horse", 8: "ship", 9: "truck"
+    0: "airplane",
+    1: "automobile",
+    2: "bird",
+    3: "cat",
+    4: "deer",
+    5: "dog",
+    6: "frog",
+    7: "horse",
+    8: "ship",
+    9: "truck",
 }
 
 
 # ── CSV ───────────────────────────────────────────────────────────────────────
 _df_cache = None
+
 
 def load_results() -> pd.DataFrame:
     global _df_cache
@@ -41,12 +50,16 @@ def _normalize_cifar(arr: np.ndarray) -> np.ndarray:
     return np.clip((arr + 1) / 2, 0, 1)
 
 
-def load_mnist(instance_id: int, method: str, target: int = None) -> Optional[np.ndarray]:
+def load_mnist(
+    instance_id: int, method: str, target: int = None
+) -> Optional[np.ndarray]:
     """Return a (28,28) float array, or None if the file is missing/blank."""
     if method == "original":
         path = os.path.join(MNIST_PATH, "original", f"instance_{instance_id}.pt")
     else:
-        path = os.path.join(MNIST_PATH, method, f"instance_{instance_id}_target_{target}.pt")
+        path = os.path.join(
+            MNIST_PATH, method, f"instance_{instance_id}_target_{target}.pt"
+        )
 
     if not os.path.exists(path):
         return None
@@ -62,12 +75,16 @@ def load_mnist(instance_id: int, method: str, target: int = None) -> Optional[np
     return img
 
 
-def load_cifar(instance_id: int, method: str, target: int = None) -> Optional[np.ndarray]:
+def load_cifar(
+    instance_id: int, method: str, target: int = None
+) -> Optional[np.ndarray]:
     """Return a (32,32,3) float array in [0,1], or None if missing/blank."""
     if method == "original":
         path = os.path.join(CIFAR_PATH, "original", f"instance_{instance_id}.pt")
     else:
-        path = os.path.join(CIFAR_PATH, method, f"instance_{instance_id}_target_{target}.pt")
+        path = os.path.join(
+            CIFAR_PATH, method, f"instance_{instance_id}_target_{target}.pt"
+        )
 
     if not os.path.exists(path):
         return None
@@ -90,7 +107,9 @@ def load_cifar(instance_id: int, method: str, target: int = None) -> Optional[np
     return img
 
 
-def load_image(network: str, instance_id: int, method: str, target: int = None) -> Optional[np.ndarray]:
+def load_image(
+    network: str, instance_id: int, method: str, target: int = None
+) -> Optional[np.ndarray]:
     if "mnist" in network:
         return load_mnist(instance_id, method, target)
     return load_cifar(instance_id, method, target)
@@ -129,10 +148,10 @@ def get_metric_row(network: str, instance_id: int, method: str, target: int) -> 
     """Return metric dict for a single CF, or {} if not found."""
     df = load_results()
     mask = (
-        (df["network"] == network) &
-        (df["image"] == instance_id) &
-        (df["method"] == method) &
-        (df["target"] == target)
+        (df["network"] == network)
+        & (df["image"] == instance_id)
+        & (df["method"] == method)
+        & (df["target"] == target)
     )
     rows = df[mask]
     if rows.empty:
@@ -168,14 +187,26 @@ def make_grid_figure(network: str, instance_id: int, target: int) -> plt.Figure:
         if cf is not None:
             ax.imshow(cf, cmap="gray" if is_mnist else None)
         else:
-            ax.text(0.5, 0.5, "N/A\n(timeout)", ha="center", va="center",
-                    transform=ax.transAxes, fontsize=8, color="gray")
+            ax.text(
+                0.5,
+                0.5,
+                "N/A\n(timeout)",
+                ha="center",
+                va="center",
+                transform=ax.transAxes,
+                fontsize=8,
+                color="gray",
+            )
             ax.set_facecolor("#f0f0f0")
 
         correctness = metrics.get("correctness", float("nan"))
         im1 = metrics.get("IM1", float("nan"))
         implaus = metrics.get("implausibility", float("nan"))
-        c_str = "✓ Valid" if correctness == 1 else ("✗ Invalid" if correctness == 0 else "?")
+        c_str = (
+            "✓ Valid"
+            if correctness == 1
+            else ("✗ Invalid" if correctness == 0 else "?")
+        )
         color = "green" if correctness == 1 else ("red" if correctness == 0 else "gray")
 
         title = f"{method}\n{c_str}"
@@ -192,7 +223,8 @@ def make_grid_figure(network: str, instance_id: int, target: int) -> plt.Figure:
     fig.suptitle(
         f"{ds_label} — Instance {instance_id}, Target {target}"
         + (f" ({CIFAR_LABELS.get(target, target)})" if not is_mnist else ""),
-        fontsize=10, fontweight="bold"
+        fontsize=10,
+        fontweight="bold",
     )
     fig.tight_layout()
     return fig
@@ -210,5 +242,7 @@ def summary_stats() -> dict:
         .unstack()
         .to_dict()
     )
-    stats["timeout_by_method"] = df.groupby("method")["timeout"].mean().round(3).to_dict()
+    stats["timeout_by_method"] = (
+        df.groupby("method")["timeout"].mean().round(3).to_dict()
+    )
     return stats
