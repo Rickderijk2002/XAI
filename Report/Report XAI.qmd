@@ -492,11 +492,19 @@ The Guided Task Mode was developed as a replacement to address the limitations o
 
 ## Research Question
 
+What you wanted to learn from testing (can align with protocol objective + your global RQ; one tight paragraph).
+
 ## Method
+
+Repeatable study: participant profile (e.g. data science students, N = 5), date/window, setting, facilitator roles, consent/recording, exact task (“complete one full guided run”), think-aloud instruction, post-test questions (list Q1–Q4 from the PDF). Say how you recorded data (notes, transcripts, optional video).
 
 ## Results
 
+Concrete observations: per person or per task/theme (confusion at step X, metric surprises, misunderstandings of validity vs plausibility, quotes). Tie to protocol fields: choice vs metrics, change of mind, where the UI helped or failed.
+
 ## Insights
+
+3–5 takeaways that directly feed §7 (what worked, what did not, what to change in the dashboard).
 
 # Conclusions & Recommendations (4 pages)
 
