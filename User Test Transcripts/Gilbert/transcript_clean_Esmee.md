@@ -257,3 +257,64 @@ Participant: Okay.
 Interviewer: Thanks again.
 
 Participant: No problem. It took a little longer than expected.
+
+
+# Suggestions for Further Improvement
+
+## 1. Front-load the meaning of validity
+
+Users should understand before the first task that validity is not a human visual judgment, but a model outcome. A short example should be added early in the flow:
+
+> Valid means the model predicts the target class, even if the image does not look convincing to you.
+
+This would reduce confusion between “I think it looks like a 3” and “the model predicts it as a 3”.
+
+## 2. Separate model logic from human intuition
+
+The dashboard should make the distinction between model-based evaluation and human perception more explicit. The participant often judged by visual realism first, while the model judged based on learned pixel patterns. The interface should repeatedly signal this distinction, especially in the mini game.
+
+Suggested framing:
+
+> Human question: does it look convincing?  
+> Model question: did the prediction change to the target class?
+
+## 3. Use short metric explanations, not only numbers
+
+The participant understood the metrics better when they were explained in plain language. Each metric should therefore include a short interpretation, not just a score.
+
+Example:
+
+> Distance is low because only a few pixels changed compared with the original image.
+
+This makes the dashboard more explainable and less dependent on prior XAI knowledge.
+
+## 4. Add pixel-change feedback to the mini game
+
+The participant naturally reasoned about how many pixels changed, but the mini game did not show this information. Add a compact distance or pixel-change indicator after each guess.
+
+Example:
+
+> Pixel change: low  
+> Interpretation: the counterfactual stayed close to the original image.
+
+This would help users connect their visual reasoning to the objective metrics.
+
+## 5. Add visual evidence for the model decision
+
+When the model prediction conflicts with human intuition, users need to see why. Add hotspots or highlighted regions that show which image areas contributed most to the model’s prediction.
+
+This would make surprising validity outcomes easier to interpret.
+
+## 6. Make binary validity feel less abrupt
+
+Validity can remain binary, but the feedback should include supporting context. Some cases feel ambiguous to users, even when the model output is strictly valid or invalid.
+
+Suggested feedback structure:
+
+> Model outcome: valid  
+> Human-facing context: low plausibility, low pixel change  
+> Explanation: the model predicts the target class, but the image may still look visually ambiguous.
+
+## Compact report paragraph
+
+The interview indicates that the next iteration should focus on making the distinction between human intuition and model-based evaluation clearer. Validity should be explained earlier as a model outcome rather than a visual judgment. Metric scores should be supported by short, case-specific explanations, especially in the mini game, where users need immediate feedback on why an answer was valid or invalid. Adding pixel-change feedback and visual hotspots would help users connect what they see in the image to the underlying model decision. Finally, binary validity feedback should be enriched with plausibility and distance context, so that ambiguous cases become easier to interpret rather than simply feeling right or wrong.
