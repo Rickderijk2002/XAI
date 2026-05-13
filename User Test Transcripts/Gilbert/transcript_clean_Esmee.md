@@ -224,20 +224,36 @@ Interviewer: You see that the human being is judging the results in another way.
 
 Participant: Yes. Okay, nice. Interesting.
 
-## 00:51:30 to 00:53:10, follow-up questions
+## 00:51:30 to 00:56:10, follow-up questions
 
-Interviewer: Thanks. I have some additional questions. Can you explain step by step why you selected this counterfactual as the best one? Summarize the method.
+Interviewer: Thanks. I have some additional questions. Can you explain step by step why you selected this counterfactual as the best one? Please summarize your reasoning.
 
-Participant: From a human intuition perspective, it looked the most realistic, like a three compared to the other methods. However, one other method actually looked really the same. So it was just: okay, let us take one of the two. I think I chose Min-Edit because that one came first. So I went for that option, but I could also have chosen the other one.
+Participant: From a human intuition perspective, it looked the most realistic, like a three, compared to the other methods. However, one other method actually looked almost the same. So it was just: okay, let us pick one of the two. I think I chose Min-Edit because that one came first, so I went for that option. But I could also have chosen the other one.
 
-Interviewer: When you saw the methods, did they match your expectations? Were you surprised? What surprised you the most?
+Interviewer: When you saw the metrics, did they match your expectations? Were you surprised, and what surprised you the most?
 
-Participant: The methods from step 4, with the explanations? No, when I answered that question, it did not surprise me. However, later I found out about the validity score. Looking at that, that was the one that surprised me the most. I thought the model would not say it was the target class, but it actually did. The other metrics, with the explanations, made a lot of sense.
+Participant: The metrics from step 4, with the explanations, did not surprise me when I answered that question. However, later I found out about the validity score. Looking at that, the actual validity was the one that surprised me the most, because I thought the model would not say it was a three, but it actually did. The other metrics, with the explanations, made a lot of sense.
 
-Interviewer: At what point did the tool help, or not help, your understanding?
+Interviewer: At what point in the interface did you understand the difference between your own judgment and the metrics? What helped, or did not help?
 
-Participant: That is a hard question. I think when I started playing the mini game, that was really when...
+Participant: That is a hard question. I think when I started playing the mini game, that was really the moment. First, I did not even think about the metrics when making the choice about whether it was valid or not. I just thought: does it look like this digit or not? But when it went wrong two times, that was when I started thinking: okay, the explanation is based on these metrics, so I also need to look at it from a metric perspective. Then I tried that. So I think the mini game helped.
 
-## 00:53:10 to 00:56:18, transcript artifact
+Interviewer: Last question. If you could change one thing in the structured dashboard, especially in how the metrics are shown, to better understand the difference between your judgment and the metrics, what would it be?
 
-[The automatic transcript contains a long repeated sequence of "The". No reliable speech content could be extracted from this part.]
+Participant: To understand the difference between the human intuition part and the metric? That is difficult. I do not really have one thing immediately where I think: this would make it much clearer. Maybe the explanations of the metrics themselves.
+
+Participant: In the mini game I was sometimes confused because I did not understand why something was the answer. Looking at the metrics, I understand that lower is better, but I do not understand why an image gets that number, or why it is considered realistic. That could be made clearer.
+
+Participant: The model makes a prediction based on the metrics, but it does not take human intuition into account, right? You also do not really see that in the explanations. So maybe the mini game could show why the model recognizes certain parts of a number, for example by highlighting important areas.
+
+Interviewer: Yes, we talked about adding something that shows why the model recognizes a number, such as important areas or hotspots.
+
+Participant: Yes, I think that would make sense. Then you would really understand why it is a one or a zero. I understand why a low number is good or a high number is bad, but I do not understand why this image gets this number. That could be clearer.
+
+Interviewer: Okay, that is it.
+
+Participant: Okay.
+
+Interviewer: Thanks again.
+
+Participant: No problem. It took a little longer than expected.
