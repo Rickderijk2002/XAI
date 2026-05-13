@@ -258,7 +258,6 @@ Interviewer: Thanks again.
 
 Participant: No problem. It took a little longer than expected.
 
-
 # Suggestions for Further Improvement
 
 ## 1. Front-load the meaning of validity
@@ -315,6 +314,3 @@ Suggested feedback structure:
 > Human-facing context: low plausibility, low pixel change  
 > Explanation: the model predicts the target class, but the image may still look visually ambiguous.
 
-## Compact report paragraph
-
-The interview indicates that the next iteration should focus on making the distinction between human intuition and model-based evaluation clearer. Validity should be explained earlier as a model outcome rather than a visual judgment. Metric scores should be supported by short, case-specific explanations, especially in the mini game, where users need immediate feedback on why an answer was valid or invalid. Adding pixel-change feedback and visual hotspots would help users connect what they see in the image to the underlying model decision. Finally, binary validity feedback should be enriched with plausibility and distance context, so that ambiguous cases become easier to interpret rather than simply feeling right or wrong.
