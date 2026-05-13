@@ -1,0 +1,103 @@
+TRANSCRIPT — COUNTERFACTUAL DASHBOARD USER STUDY
+==================================================
+
+INTRODUCTION
+------------
+
+Researcher: Okay, what you're going to do is look at a dashboard and go through it step by step. It's a guided dashboard, so everything is explained along the way. It's all about counterfactuals — have you heard of those before?
+
+Counterfactuals work like this: if someone writes a 7 by hand, a model recognizes it as a 7. But if the target class is something different — for example a 0 — then a counterfactual explains which pixels need to change before the model thinks "oh, it's a 0."
+
+The goal of this dashboard is to explain how this works and to get you thinking about how you see a digit versus how the model sees it — because that can be very different.
+
+Instructions:
+- Read everything first and fill in your name
+- Go through the 7 steps
+- Say out loud if something is unclear or you don't understand — we'll incorporate that feedback into the report
+- There is no right or wrong answer
+
+
+STEP 1 — GOING THROUGH THE DASHBOARD
+--------------------------------------
+
+Participant: These are images of the objective... evaluation metrics. MNIST? I know that dataset. So I'm going to see images of digits, and also images of digits that look like a different digit?
+
+Researcher: Yes, you'll see the counterfactuals. The model always sees things differently than you'd expect.
+
+
+STEP 2 — EVALUATING COUNTERFACTUALS
+-------------------------------------
+
+Researcher: Is the counterfactual successful — does it clearly look like it belongs to the target class? The target is 7. Does it clearly look like a 7?
+
+Participant: No, it doesn't. Not successful.
+
+Researcher: That's what I think too, but you should say what you think. Rate of fooling based on what you see, 0 to 1 — do you think the model was fooled?
+
+Participant: That's a tricky question. It's just genuinely not a 7. So is it fooled? This is a 0.
+
+Researcher: You need to look at the counterfactual the model produced. It's a database with lots of counterfactuals — some are good, some are bad. The question is: does the model think it's a 7 or not?
+
+Participant: Oh, is it fooled? So it adjusts the 0 to try to hit the target 7 — changes a few pixels, shifts some things — and the goal is that the model then sees it as a 7. I can kind of see how that straight line makes it look a bit more like a 7. Let's put it at around 0.15.
+
+
+STEP 3 — CHOOSING THE BEST METHOD
+------------------------------------
+
+Researcher: All 5 CF models are shown below. Which one do you think is the most successful? Consider both whether it looks realistic and whether the model will be fooled.
+
+Participant: That last one didn't even manage to produce a result — that model just failed completely. I see one that has a 7... and another one too. One of those two. I'm somewhat comfortable with the choice, not super comfortable, but a bit. Let's say 70%.
+
+Researcher: Tell us why you made this choice. Were you surprised by the images that came out?
+
+Participant: No, I wouldn't have expected them to look like this when the target is a 7. That one I understand, that one too — but the other one is just worse. It has this weird gap.
+
+
+STEP 4 — UNDERSTANDING THE METRICS
+-------------------------------------
+
+Researcher: How do you read these metrics? These cover distribution similarity, implausibility, and pixel change.
+
+Participant: Implausibility — higher is bad. But wait, it also says "high plausibility is bad" — that doesn't add up. Plausibility and implausibility are opposites, but for both, higher is bad? That's confusing.
+
+Researcher: That's good feedback — that explanation was indeed unclear.
+
+Participant: And for the IM1 question — "does it look like a realistic image?" — I was confused, because it does look like a number but more like a 0, not a 7. It wasn't clear which comparison was being made.
+
+Researcher: So you felt IM1 should have been explained better — whether it should look like any digit, or specifically like the target digit.
+
+Participant: Yes, exactly. And with the score of 0.2 — I didn't know how far that was from the mean, or what the min/max or standard deviation was.
+
+Researcher: Oh, but that's actually shown here — from 0.0 to 0.9.
+
+Participant: Oh right, so with 0.2 I'm quite close to the mean of 0.07. Okay, that makes sense then.
+
+
+STEP 5 — UNDERSTANDING THE RANKING
+-------------------------------------
+
+Researcher: The selected best method is #3. The actual ranking goes: validity first, then plausibility.
+
+Participant: Interesting. I'd also like to see all the counterfactuals again alongside the metrics, so I can see why one is valid and another isn't. Right now I only see the ranking but not the images anymore.
+
+Researcher: That's a fair point — seeing them together would help with understanding.
+
+Participant: And the best method also wins on pixel change — it modifies the fewest pixels. The other one even adjusts the entire background, so it scores higher on pixel change, which is worse.
+
+
+CLOSING QUESTIONS
+------------------
+
+Question 1 — When did you understand the difference between your judgment and the metrics?
+
+Participant: When the metrics were explained, and especially with the images alongside them. I learn easily with visuals. Once the metrics were clearly explained with the visualizations, it started clicking.
+
+---
+
+Question 2 — What would you change about the dashboard?
+
+Participant: With implausibility, it wasn't clear to me whether you're judging whether it looks like any digit, or specifically like the target digit. That needs to be stated more explicitly in the explanation — not vague, but clearly indicating that you're evaluating whether it resembles the target digit specifically.
+
+---
+
+End of recording.
