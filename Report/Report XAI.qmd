@@ -496,7 +496,7 @@ In the testing phase, the aim was to perform user tests to evaluate our prototyp
 
 ## Method
 
-User testing followed the project protocol **CF Game User Testing Protocol (v3)** (`Report/Design Market/CF_Game_Test_Protocol.pdf`). The approach was a think-aloud usability test, followed by a short probing interview after the session. \newline
+User testing followed the project protocol CF Game User Testing Protocol (`Report/Design Market/CF_Game_Test_Protocol.pdf`). The approach was a think-aloud usability test, followed by a short probing interview after the session. \newline
 
 Sessions were run one-to-one in a quiet setting. The participant was told that the session tests the prototype, not the person, that there are no right or wrong answers, and that they should think aloud as much as possible while using the tool. They were briefly introduced to the goal and basic behaviour of the dashboard, and consent was obtained for screen recording where recording was used. \newline
 
@@ -504,13 +504,13 @@ The task was to complete one full run of Guided Task Mode in the Streamlit proto
 
 After the guided run, the facilitator conducted a short interview with the questions below (skipping questions already fully covered during think-aloud). Follow-up prompts from the protocol were used when helpful, for example “Why would that help you?”, “Can you give a concrete example?”, and an open prompt for remaining comments. \newline
 
--   Q1 (decision process): Can you explain step by step why you selected this counterfactual as the best one?
+-   **Q1 (decision process)**: Can you explain step by step why you selected this counterfactual as the best one?
 
--   Q2 (alignment with metrics): When you saw the metrics, did they match your expectations? What surprised you the most?
+-   **Q2 (alignment with metrics)**: When you saw the metrics, did they match your expectations? What surprised you the most?
 
--   Q3 (interface understanding): At what point in the interface did you understand the difference between your judgment and the metrics, and what helped or did not help?
+-   **Q3 (interface understanding)**: At what point in the interface did you understand the difference between your judgment and the metrics, and what helped or did not help?
 
--   Q4 (improvement): If you could change one thing in the structured dashboard (for example layout, order of steps, or how metrics are shown) to better understand the difference between your judgment and the metrics, what would it be?
+-   **Q4 (improvement)**: If you could change one thing in the structured dashboard (for example layout, order of steps, or how metrics are shown) to better understand the difference between your judgment and the metrics, what would it be?
 
 Participants were five people drawn from the intended audience (current or recent data science students), in line with the design brief. Sessions took place between 7 May 2026 and 14 May 2026. Data capture was mostly screen recordings later transcribed into text for analysis; the exact recording and transcription workflow differed slightly by facilitator, but each session produced usable notes or transcripts for coding. Raw materials (recordings, transcripts, protocol) are stored in the project archive; findings are reported in the Results and Insights sections below.
 
@@ -522,9 +522,9 @@ Each session was summarised using the same field template (session metadata, obs
 
 ### Cross-session patterns
 
-Across five participants, recurring themes from the coding tags were: **metric literacy and copy** (plausibility versus implausibility, binary validity versus continuous sliders, IM1 scope), **information layout** (long text, scrolling versus memory, desire for hover or inline explanations), **positive overall structure** (guided order generally acceptable), and **friction at specific steps** (Step 4 density, “which CF is which” across steps, Next or text-submit affordances). Assistance occurred in every session, which limits how much can be claimed about learning from the interface alone without facilitator support.
+Across five participants, recurring themes from the coding tags were: metric literacy and copy (plausibility versus implausibility, binary validity versus continuous sliders, IM1 scope), information layout (long text, scrolling versus memory, desire for hover or inline explanations), positive overall structure (guided order generally acceptable), and friction at specific steps (Step 4 density, “which CF is which” across steps, Next or text-submit affordances). Assistance occurred in every session, which limits how much can be claimed about learning from the interface alone without facilitator support.
 
-The following subsections summarise each participant. Session-level coding notes and quotes are archived in `User Test Transcripts/results/` (`analysis-max.md`, `analysis-andres.md`, `analysis-patryk.md`, `analysis-esmee.md`, `analysis-damian.md` for the session coded as **Tim** in `coding_matrix.csv`).
+The following subsections summarise each participant. Session-level coding notes and quotes are archived in `User Test Transcripts/results/` (`analysis-max.md`, `analysis-andres.md`, `analysis-patryk.md`, `analysis-esmee.md`, `analysis-damian.md` for the session coded as Tim in `coding_matrix.csv`).
 
 ### Participant 1: Max
 
@@ -542,17 +542,19 @@ Patryk explicitely has prior experience with counterfactuals and XAI, so his obs
 
 Esmee read carefully and asked early what unnaturalness meant, then needed help mapping the validity slider to model-side “fooled” rather than only human resemblance. She chose Min-Edit with moderate confidence and kept that method choice after metrics, while revising her understanding of validity once metrics were explained. The strongest surprise was actual validity (model behaviour) versus what still looked like a seven to her. She highlighted Step 4 explanations as most helpful and later used the mini game to rehearse a more metric-aware strategy; state clearly in the archive whether that extension was in scope for your protocol version. A useful quote anchor is: “But does the model think this is a three? How do I know what the model thinks this is?”
 
-### Participant 5: Tim
+### Participant 5: Damian
 
-Tim produced rich think-aloud material on metric directions and ranking. He flagged copy that sounded contradictory between plausibility and implausibility (“for both, higher is bad?”), asked for IM1 to state whether “realistic” means any digit or the target digit, and requested counterfactual images alongside metrics when rankings were discussed so validity differences would not rely on memory. He also noted a failed method slot in the five-way comparison. A useful quote anchor is: “Implausibility, higher is bad. But wait, it also says "high plausibility is bad", that doesn't add up.” The formatted source transcript ends after two closing prompts, so not every protocol interview sub-question appears as a separate heading in that file.
+Damian produced rich think-aloud material on metric directions and ranking. He flagged copy that sounded contradictory between plausibility and implausibility (“for both, higher is bad?”), asked for IM1 to state whether “realistic” means any digit or the target digit, and requested counterfactual images alongside metrics when rankings were discussed so validity differences would not rely on memory. He also noted a failed method slot in the five-way comparison. A useful quote anchor is: “Implausibility, higher is bad. But wait, it also says "high plausibility is bad", that doesn't add up.” The formatted source transcript ends after two closing prompts, so not every protocol interview sub-question appears as a separate heading in that file.
 
 ## Insights
 
-1.  **Clarify validity early as a model prediction**, not only “looks like the target,” then align **slider** or feedback so users are not surprised when **binary** model validity appears (Patryk, Esmee, Tim, Andres).
-2.  **Tighten metric copy and pairing**: separate **plausibility** and **implausibility**, state whether scores judge **target class** versus **any digit**, and keep **images beside rankings** or comparisons (Patryk, Tim, Esmee, Andres).
-3.  **Reduce text and scroll distance** between guidance and tasks; add **hover or short inline** explanations for metrics (Max, Patryk, Tim).
-4.  **Fix interaction affordances** for advancing after text entry and for **empty** method outputs so comparisons stay interpretable (Patryk, Andres).
-5.  **Document assistance** in the report when drawing conclusions, because **all five** sessions included facilitator help at least once, which shapes what the UI can be said to teach on its own.
+Across the five sessions, the same design tensions returned in different forms. First, validity was often read as a visual question (“does it look like the target?”) while the system later treats it as a model prediction outcome. Patryk, Esmee, Damian, and Andres all needed time or help to align those meanings. That mismatch interacts badly with a continuous slider for user validity when the revealed model validity is effectively binary, so the interface should introduce the model definition early and tune controls or feedback so the later reveal does not feel arbitrary.
+
+Second, participants struggled when metric labels and pairings were easy to misread. Plausibility and implausibility were sometimes interpreted as contradictory, and IM1-style prompts were unclear about whether “realistic” meant any plausible digit or the target class specifically. Patryk, Damian, Esmee, and Andres would benefit from tighter copy, consistent directionality, and layouts that keep counterfactual images next to rankings so users do not have to remember which image belonged to which score.
+
+Third, information density and navigation shaped trust. Max, Patryk, and Damian asked for shorter text, less vertical distance between guidance and tasks, and hover or inline explanations so they would not lose context when scrolling. Fourth, small interaction issues carried disproportionate weight: advancing after text entry was fiddly for Patryk, and an empty method output broke the comparison story for Andres. Fixing those affordances should be treated as core usability work, not polish.
+
+Finally, assistance was present in every session. Facilitators clarified definitions, restated model-centric goals, and sometimes carried part of the explanation load. That is honest for a lab study, but it means conclusions about “what the dashboard teaches on its own” must be stated carefully. The recommendations above should be read as priorities for a next iteration that reduces dependence on live help while preserving the guided structure that participants generally accepted.
 
 # Conclusions & Recommendations (4 pages)
 
