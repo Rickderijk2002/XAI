@@ -511,12 +511,28 @@ As participants, five data science student (or former student) were selected, in
 The recordings of these tests are generally in the form of screen-recordings, which were then transcribed. The exact methods of recording and transcribing vary between facilitators. The results of the tests are presented in the following section, with recordings and transcriptions available in the archive.
 
 ## Results
+The user study results are presented on a per-participant basis:
+### Participant 1: Max
 
-Concrete observations: per person or per task/theme (confusion at step X, metric surprises, misunderstandings of validity vs plausibility, quotes). Tie to protocol fields: choice vs metrics, change of mind, where the UI helped or failed.
+### Participant 2: Andres
+
+### Participant 3: Patryk
+This participant has prior experience with counterfactuals and XAI in general, as well as some knowledge of this counterfactual assignment specifically.
+As such, the primary insights gained are relevant to the design of the dashboard and game. In particular, the use of a slider for the user's validity score was deemed misleading, since the objective validity score is given as a binary value (meaning the user validity will almost never match the objective validity). 
+In addition, the participant reported having difficulty remembering which counterfactual was which, particularly between the initially shown CF, the user-chosen best CF, and the objective best CF, which are the three most important CF's for the game. 
+Some steps were also evidently overwhelming, with the participant being unsure how much of the on-screen text was necessary to read; the participant ended up skipping large sections of text as the game went on.
+In step 4, three objective scores are shown (validity, plausibility, and implausibility). The first two are shown with a comparison to user score, but the third is not, since the user never gives their own estimate for implausibility. The participant deemed this confusing.
+Lastly, the participant expressed some frustration at the UI in terms of the "next" button. For this button to become active, the user has to first fill in the final text box, then explicitely either click outside of the text box or press control+enter. The participant felt this was not very clear and a minor but annoying extra step of effort.
+
+### Participant 4: Esmee
+
+### Participant 5: [Anonymous]
+
+`Concrete observations: per person or per task/theme (confusion at step X, metric surprises, misunderstandings of validity vs plausibility, quotes). Tie to protocol fields: choice vs metrics, change of mind, where the UI helped or failed.`
 
 ## Insights
 
-3–5 takeaways that directly feed §7 (what worked, what did not, what to change in the dashboard).
+`3–5 takeaways that directly feed §7 (what worked, what did not, what to change in the dashboard).`
 
 # Conclusions & Recommendations (4 pages)
 
