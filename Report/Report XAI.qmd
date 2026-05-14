@@ -221,9 +221,9 @@ This direction forms the basis for the ideation phase, where multiple design con
 
 # 4 Ideation Phase
 
-## 4.1 Divergence — Generating Design Concepts
+## 4.1 Divergence: Generating Design Concepts
 
-Following the define phase, the ideation phase focused on exploring a broad range of possible solutions to address the central challenge: *making the gap between human intuition and model-based evaluation visible and interpretable*.
+Following the define phase, the ideation phase focused on exploring a broad range of possible solutions to address the central challenge: making the gap between human intuition and model-based evaluation visible and interpretable.
 
 To ensure sufficient divergence, a structured brainwriting session was conducted. Each team member independently generated ideas before sharing them with the group. This approach reduced the risk of early convergence on familiar solutions and encouraged the exploration of alternative interaction patterns.
 
@@ -337,7 +337,7 @@ Limitations:
 Relation to the core problem:\
 This concept directly addresses the central challenge by making the relationship between intuition and metrics explicit. It operationalizes the gap identified in the empathize phase and creates a measurable interaction.
 
-## 4.2 COCD Box — Structuring Divergence and Convergence
+## 4.2 COCD Box: Structuring Divergence and Convergence
 
 To support convergence, the generated ideas were mapped onto a COCD (Creative Problem Solving) box, positioning them based on feasibility and originality.
 
@@ -358,7 +358,7 @@ Two concepts, *The Tension Map* and *The Guided Task Game*, were placed in the �
 
 The distribution of ideas indicates that initial ideation tended to gravitate toward familiar solutions. The COCD mapping made it possible to explicitly identify and select concepts that introduce meaningful innovation while remaining implementable.
 
-## 4.3 Convergence — Selection of Design Direction
+## 4.3 Convergence: Selection of Design Direction
 
 Based on the COCD analysis and the insights from the empathize and define phases, the *Guided Task Mode Dashboard* was selected as the primary design direction.
 
@@ -492,47 +492,67 @@ The Guided Task Mode was developed as a replacement to address the limitations o
 
 ## Research Question
 
-In the testing phase, the aim was to perform user tests to evaluate our prototype.
-The primary objective was to evaluate how human judgments of counterfactual explanations align with objective metrics, and how the structured dashboard helps reveal or reduce discrepancies.
-This is in line with our overall research question. In addition, a more concrete goal was to discover any points of conflict or confusion users experienced using the prototype. These would form the basis of further development, as they inform what should be changed and improved on the prototype to allow the target users to make use of it most effectively.
+In the testing phase, the aim was to perform user tests to evaluate our prototype. The primary objective was to evaluate how human judgments of counterfactual explanations align with objective metrics, and how the structured dashboard helps reveal or reduce discrepancies. This is in line with our overall research question. In addition, a more concrete goal was to discover any points of conflict or confusion users experienced using the prototype. These would form the basis of further development, as they inform what should be changed and improved on the prototype to allow the target users to make use of it most effectively.
 
 ## Method
 
-The method used is a "think-aloud" usability test, followed optionally by a short probing interview.
-This involves setting up the prototype in a reasonably quiet, one-on-one environment, where the participant can freely use it. At the start, the participant is briefly explained what the goal and basic function of the prototype is, as well as asked for consent to (screen)record their use of it. After that, the participant is to complete a full run of the guided task mode of the prototype, where they are encouraged to speak out loud any observation they make, be it positive, negative, or neutral. At this time, the facilitator is to say as little as possible, noting down what the participant says alongside any other noteworthy observations, and only intervening or helping out the participant if absolutely necssary (i.e. the participant truly does not understand how to continue). Should any assistance be provided, this too should be noted down alongside a reason for the assistance.
-Once the guided task mode game has concluded, the facilitator should ask the participant a few questions, provided they have not already been addressed during the game:
-- Can you explain step by step why you selected this counterfactual as the best one?
-- When you saw the metrics, did they match your expectations? What surprised you the most?
-- At what point in the interface did you understand the difference between your judgment and the metrics, and what helped or did not help?
-- If you could change one thing in the structured dashboard (e.g. layout, order of steps, or how metrics are shown) to better understand the difference between your judgment and the metrics, what would it be?
-Additionally, the facilitator may ask for follow-up prompts, e.g. "Why would that help you?" or "Can you give a concrete example?", or ask the participant if they themselves have any remaining comments about the prototype and their use thereof.
+User testing followed the project protocol **CF Game User Testing Protocol (v3)** (`Report/Design Market/CF_Game_Test_Protocol.pdf`). The approach was a think-aloud usability test, followed by a short probing interview after the session. \newline
 
-As participants, five data science student (or former student) were selected, in line with the target audience of the prototype. The tests were conducted in the range of 07-05-26 to 14-05-26.
-The recordings of these tests are generally in the form of screen-recordings, which were then transcribed. The exact methods of recording and transcribing vary between facilitators. The results of the tests are presented in the following section, with recordings and transcriptions available in the archive.
+Sessions were run one-to-one in a quiet setting. The participant was told that the session tests the prototype, not the person, that there are no right or wrong answers, and that they should think aloud as much as possible while using the tool. They were briefly introduced to the goal and basic behaviour of the dashboard, and consent was obtained for screen recording where recording was used. \newline
+
+The task was to complete one full run of Guided Task Mode in the Streamlit prototype, from initial judgment through final reflection, as defined in the protocol. During use, the facilitator spoke as little as possible, took notes on what the participant said and did, and recorded confusion, key decisions, and any assistance given. Assistance was used only when necessary (for example when the participant could not continue). Any help was logged together with a short reason. \newline
+
+After the guided run, the facilitator conducted a short interview with the questions below (skipping questions already fully covered during think-aloud). Follow-up prompts from the protocol were used when helpful, for example “Why would that help you?”, “Can you give a concrete example?”, and an open prompt for remaining comments. \newline
+
+-   Q1 (decision process): Can you explain step by step why you selected this counterfactual as the best one?
+
+-   Q2 (alignment with metrics): When you saw the metrics, did they match your expectations? What surprised you the most?
+
+-   Q3 (interface understanding): At what point in the interface did you understand the difference between your judgment and the metrics, and what helped or did not help?
+
+-   Q4 (improvement): If you could change one thing in the structured dashboard (for example layout, order of steps, or how metrics are shown) to better understand the difference between your judgment and the metrics, what would it be?
+
+Participants were five people drawn from the intended audience (current or recent data science students), in line with the design brief. Sessions took place between 7 May 2026 and 14 May 2026. Data capture was mostly screen recordings later transcribed into text for analysis; the exact recording and transcription workflow differed slightly by facilitator, but each session produced usable notes or transcripts for coding. Raw materials (recordings, transcripts, protocol) are stored in the project archive; findings are reported in the Results and Insights sections below.
 
 ## Results
-The user study results are presented on a per-participant basis:
+
+### Qualitative coding
+
+Each session was summarised using the same field template (session metadata, observed behaviours, confusion by step, assistance, protocol-style outcomes, research-question notes, and a verified quote). Summaries live in `User Test Transcripts/results/analysis-<participant>.md`. The same fields were also stored in machine-readable form in `User Test Transcripts/results/coding_matrix.csv` (one column per participant, one row per field) to support cross-session comparison and traceability. Optional log rows in `src/guided_task_results.json` were used only where a row clearly matched the same participant and session, to tighten wording on picks and model-side “best” methods.
+
+### Cross-session patterns
+
+Across five participants, recurring themes from the coding tags were: **metric literacy and copy** (plausibility versus implausibility, binary validity versus continuous sliders, IM1 scope), **information layout** (long text, scrolling versus memory, desire for hover or inline explanations), **positive overall structure** (guided order generally acceptable), and **friction at specific steps** (Step 4 density, “which CF is which” across steps, Next or text-submit affordances). Assistance occurred in every session, which limits how much can be claimed about learning from the interface alone without facilitator support.
+
+The following subsections summarise each participant. Session-level coding notes and quotes are archived in `User Test Transcripts/results/` (`analysis-max.md`, `analysis-andres.md`, `analysis-patryk.md`, `analysis-esmee.md`, `analysis-damian.md` for the session coded as **Tim** in `coding_matrix.csv`).
+
 ### Participant 1: Max
+
+Max treated the comparison as purely visual and picked Alibi Proto CF because a digit was most visible to him, while treating dashboard “best” as model-reported. He said metrics did not drive his personal choice: “Yes, purely visual. The metrics do not really interest me.” He found the overall layout pleasant but wanted less scrolling, shorter text, and hover or inline explanations so he would not lose context between the top guidance and lower panels. Step 4 (“Action Matrix”) felt unclear when moving quickly. The session included frequent facilitator explanations (intro through post-task questions).
 
 ### Participant 2: Andres
 
+Andres showed early friction with what validity and CF meant in the interface, slider granularity, and metric direction (including implausibility versus his plausibility estimate). He also reported contradictory-feeling success messaging versus an invalid method in the same flow, and difficulty comparing recap numbers to earlier estimates. On the core distinction between his judgment on the image and what the model predicts, he answered: “Not to be honest. No. I didn't get that part.” He asked for clearer method definitions and a slightly more explicit study goal early. If you also cite `guided_task_results.json`, reconcile any mismatch between that log row and this brief by confirming it is the same session.
+
 ### Participant 3: Patryk
-This participant has prior experience with counterfactuals and XAI in general, as well as some knowledge of this counterfactual assignment specifically.
-As such, the primary insights gained are relevant to the design of the dashboard and game. In particular, the use of a slider for the user's validity score was deemed misleading, since the objective validity score is given as a binary value (meaning the user validity will almost never match the objective validity). 
-In addition, the participant reported having difficulty remembering which counterfactual was which, particularly between the initially shown CF, the user-chosen best CF, and the objective best CF, which are the three most important CF's for the game. 
-Some steps were also evidently overwhelming, with the participant being unsure how much of the on-screen text was necessary to read; the participant ended up skipping large sections of text as the game went on.
-In step 4, three objective scores are shown (validity, plausibility, and implausibility). The first two are shown with a comparison to user score, but the third is not, since the user never gives their own estimate for implausibility. The participant deemed this confusing.
-Lastly, the participant expressed some frustration at the UI in terms of the "next" button. For this button to become active, the user has to first fill in the final text box, then explicitely either click outside of the text box or press control+enter. The participant felt this was not very clear and a minor but annoying extra step of effort.
+
+This participant has prior experience with counterfactuals and XAI in general, as well as some knowledge of this counterfactual assignment specifically. As such, the primary insights gained are relevant to the design of the dashboard and game. In particular, the use of a slider for the user's validity score was deemed misleading, since the objective validity score is given as a binary value (meaning the user validity will almost never match the objective validity). In addition, the participant reported having difficulty remembering which counterfactual was which, particularly between the initially shown CF, the user-chosen best CF, and the objective best CF, which are the three most important CFs for the game. Some steps were also evidently overwhelming, with the participant being unsure how much of the on-screen text was necessary to read; the participant ended up skipping large sections of text as the game went on. In step 4, three objective scores are shown (validity, plausibility, and implausibility). The first two are shown with a comparison to user score, but the third is not, since the user never gives their own estimate for implausibility. The participant deemed this confusing. Lastly, the participant expressed some frustration at the UI in terms of the "next" button. For this button to become active, the user has to first fill in the final text box, then explicitly either click outside of the text box or press control+enter. The participant felt this was not very clear and a minor but annoying extra step of effort.
 
 ### Participant 4: Esmee
 
-### Participant 5: [Anonymous]
+Esmee read carefully and asked early what unnaturalness meant, then needed help mapping the validity slider to model-side “fooled” rather than only human resemblance. She chose Min-Edit with moderate confidence and kept that method choice after metrics, while revising her understanding of validity once metrics were explained. The strongest surprise was actual validity (model behaviour) versus what still looked like a seven to her. She highlighted Step 4 explanations as most helpful and later used the mini game to rehearse a more metric-aware strategy; state clearly in the archive whether that extension was in scope for your protocol version. A useful quote anchor is: “But does the model think this is a three? How do I know what the model thinks this is?”
 
-`Concrete observations: per person or per task/theme (confusion at step X, metric surprises, misunderstandings of validity vs plausibility, quotes). Tie to protocol fields: choice vs metrics, change of mind, where the UI helped or failed.`
+### Participant 5: Tim
+
+Tim produced rich think-aloud material on metric directions and ranking. He flagged copy that sounded contradictory between plausibility and implausibility (“for both, higher is bad?”), asked for IM1 to state whether “realistic” means any digit or the target digit, and requested counterfactual images alongside metrics when rankings were discussed so validity differences would not rely on memory. He also noted a failed method slot in the five-way comparison. A useful quote anchor is: “Implausibility, higher is bad. But wait, it also says "high plausibility is bad", that doesn't add up.” The formatted source transcript ends after two closing prompts, so not every protocol interview sub-question appears as a separate heading in that file.
 
 ## Insights
 
-`3–5 takeaways that directly feed §7 (what worked, what did not, what to change in the dashboard).`
+1.  **Clarify validity early as a model prediction**, not only “looks like the target,” then align **slider** or feedback so users are not surprised when **binary** model validity appears (Patryk, Esmee, Tim, Andres).
+2.  **Tighten metric copy and pairing**: separate **plausibility** and **implausibility**, state whether scores judge **target class** versus **any digit**, and keep **images beside rankings** or comparisons (Patryk, Tim, Esmee, Andres).
+3.  **Reduce text and scroll distance** between guidance and tasks; add **hover or short inline** explanations for metrics (Max, Patryk, Tim).
+4.  **Fix interaction affordances** for advancing after text entry and for **empty** method outputs so comparisons stay interpretable (Patryk, Andres).
+5.  **Document assistance** in the report when drawing conclusions, because **all five** sessions included facilitator help at least once, which shapes what the UI can be said to teach on its own.
 
 # Conclusions & Recommendations (4 pages)
 
@@ -578,9 +598,9 @@ The newer frontend integrated in this report addresses these issues directly. We
 
 ![Actual metric 3](images/Final%20prototype/Actual%20Metrics%20FV%203.png){#fig-actual metric 3}
 
-![Explanation & Feedback FV 1](images/Final prototype/Explanation_Feedback 1.png)
+![Explanation & Feedback FV 1](images/Final%20prototype/Explanation_Feedback%201.png)
 
-![Explanation & Feedback 2](images/Final prototype/Explanation_ feedback_2.png){#fig-expla-2}
+![Explanation & Feedback 2](images/Final%20prototype/Explanation_%20feedback_2.png){#fig-expla-2}
 
 ![Compare methods FV 1](images/Final%20prototype/Compare%20all%20methods%201.png)
 
@@ -588,21 +608,21 @@ The newer frontend integrated in this report addresses these issues directly. We
 
 ![Compare methods FV 3](images/Final%20prototype/Compare%20all%20methods%203.png)
 
-![CF & Thoughts FV](images/Final prototype/Confidence_Final_ Thoughts.png)
+![CF & Thoughts FV](images/Final%20prototype/Confidence_Final_%20Thoughts.png)
 
-![CF Thoughts 2](images/Final prototype/Confidence_final_thoughts 2.png)
+![CF Thoughts 2](images/Final%20prototype/Confidence_final_thoughts%202.png)
 
-![Mini-Game Homescreen](images/Final prototype/Mini Game homescreen.png)
+![Mini-Game Homescreen](images/Final%20prototype/Mini%20Game%20homescreen.png)
 
-![Minigame Information](images/Final prototype/Minigame.png)
+![Minigame Information](images/Final%20prototype/Minigame.png)
 
-![Round Example 1](images/Final prototype/Round 1 (1).png)
+![Round Example 1](images/Final%20prototype/Round%201%20(1).png)
 
-![Round Example 2](images/Final prototype/Round 1 (2).png)
+![Round Example 2](images/Final%20prototype/Round%201%20(2).png)
 
-![Mini-Game Choice](images/Final prototype/Minigame (3).png)
+![Mini-Game Choice](images/Final%20prototype/Minigame%20(3).png)
 
-![Leaderbord](images/Final prototype/Leaderbord.png)
+![Leaderbord](images/Final%20prototype/Leaderbord.png)
 
 # Appendix Archive Prototype {#sec-appendix-archive-prototype}
 
