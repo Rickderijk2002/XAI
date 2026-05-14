@@ -492,11 +492,23 @@ The Guided Task Mode was developed as a replacement to address the limitations o
 
 ## Research Question
 
-What you wanted to learn from testing (can align with protocol objective + your global RQ; one tight paragraph).
+In the testing phase, the aim was to perform user tests to evaluate our prototype.
+The primary objective was to evaluate how human judgments of counterfactual explanations align with objective metrics, and how the structured dashboard helps reveal or reduce discrepancies.
+This is in line with our overall research question. In addition, a more concrete goal was to discover any points of conflict or confusion users experienced using the prototype. These would form the basis of further development, as they inform what should be changed and improved on the prototype to allow the target users to make use of it most effectively.
 
 ## Method
 
-Repeatable study: participant profile (e.g. data science students, N = 5), date/window, setting, facilitator roles, consent/recording, exact task (“complete one full guided run”), think-aloud instruction, post-test questions (list Q1–Q4 from the PDF). Say how you recorded data (notes, transcripts, optional video).
+The method used is a "think-aloud" usability test, followed optionally by a short probing interview.
+This involves setting up the prototype in a reasonably quiet, one-on-one environment, where the participant can freely use it. At the start, the participant is briefly explained what the goal and basic function of the prototype is, as well as asked for consent to (screen)record their use of it. After that, the participant is to complete a full run of the guided task mode of the prototype, where they are encouraged to speak out loud any observation they make, be it positive, negative, or neutral. At this time, the facilitator is to say as little as possible, noting down what the participant says alongside any other noteworthy observations, and only intervening or helping out the participant if absolutely necssary (i.e. the participant truly does not understand how to continue). Should any assistance be provided, this too should be noted down alongside a reason for the assistance.
+Once the guided task mode game has concluded, the facilitator should ask the participant a few questions, provided they have not already been addressed during the game:
+- Can you explain step by step why you selected this counterfactual as the best one?
+- When you saw the metrics, did they match your expectations? What surprised you the most?
+- At what point in the interface did you understand the difference between your judgment and the metrics, and what helped or did not help?
+- If you could change one thing in the structured dashboard (e.g. layout, order of steps, or how metrics are shown) to better understand the difference between your judgment and the metrics, what would it be?
+Additionally, the facilitator may ask for follow-up prompts, e.g. "Why would that help you?" or "Can you give a concrete example?", or ask the participant if they themselves have any remaining comments about the prototype and their use thereof.
+
+As participants, five data science student (or former student) were selected, in line with the target audience of the prototype. The tests were conducted in the range of 07-05-26 to 14-05-26.
+The recordings of these tests are generally in the form of screen-recordings, which were then transcribed. The exact methods of recording and transcribing vary between facilitators. The results of the tests are presented in the following section, with recordings and transcriptions available in the archive.
 
 ## Results
 
