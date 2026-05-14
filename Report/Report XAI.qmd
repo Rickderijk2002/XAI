@@ -536,7 +536,7 @@ Andres showed early friction with what validity and CF meant in the interface, s
 
 ### Participant 3: Patryk
 
-Patryk explicitely has prior experience with counterfactuals and XAI, so his observations were mainly focused on design and interaction detail. He found the validity slider misleading because model validity is binary, which makes direct comparisons between user estimates and the model unintuitive. He also struggled to keep track of which counterfactual was which (the initially shown CF, the one he picked as best, and the model’s best), and notably skipped large blocks of on-screen text when the flow became dense. Finally, he flagged Step 4 as confusing as implausibility is not compared to a user estimate, and called out the "Next" button as unintuitive, since it requires an extra click or Control+Enter after typing the final text prompt to activate.
+Patryk explicitly has prior experience with counterfactuals and XAI, so his observations were mainly focused on design and interaction detail. He found the validity slider misleading because model validity is binary, which makes direct comparisons between user estimates and the model unintuitive. He also struggled to keep track of which counterfactual was which (the initially shown CF, the one he picked as best, and the model’s best), and notably skipped large blocks of on-screen text when the flow became dense. Finally, he flagged Step 4 as confusing as implausibility is not compared to a user estimate, and called out the "Next" button as unintuitive, since it requires an extra click or Control+Enter after typing the final text prompt to activate.
 
 ### Participant 4: Esmee
 
