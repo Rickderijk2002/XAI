@@ -164,4 +164,38 @@
     "step7_change_answer": "No",
     "step7_final_thoughts": "As I understand it yes, but i am not completly sure of how these methods works overall, so it was pure guessing."
   }
+   {
+    "player_name": "Damian",
+    "timestamp": 1778515917.478781,
+    "network": "mnist_output_100",
+    "instance_id": 56,
+    "target": 7,
+    "original_label": 0,
+    "shown_method_steps_1_2": "PIECE",
+    "step1_judgment": "No, not successful",
+    "step1_why": "Because it doesn't look like a 7",
+    "step2_validity_estimate": 0.16,
+    "step2_plausibility_estimate": 0.15,
+    "step3_best_method": "alibi-Proto-CF",
+    "step3_confidence": 75,
+    "step3_why_pick": "Because it looks most like a 7. \nYes, Min-Edit looks more like an 8.\nThe original 0 is fully connected and alibi-Proto-CF is able to create a gap to make it more closely reseble a 7.\n\n",
+    "step4_actual_correctness": 0,
+    "step4_actual_IM1": 1.0,
+    "step4_actual_implausibility": 0.5539366120277279,
+    "step4_surprised_reaction": "Not really, the results were somewhat expected.\nBy the explenation on the dashboard it wasn't really clear to me at first, which is also why some of my predictions weren't really close to the actuals. After an exxplenation everything made sense and was as expexted.\n",
+    "step5_why_chosen": "The answer does make sense to me, because it's the answer that I also choose. Yet, I don't know what the images from the other methods look like anymore, which make it hard to answer this question.",
+    "step5_actual_best_method": "alibi-Proto-CF",
+    "step5_player_matched": true,
+    "step6_would_change_pick": "No, I would still pick the same method",
+    "step6_final_pick": "alibi-Proto-CF",
+    "step6_why_change": "No, because it's still clearly the best method. The only metric where it didn't score best was likely caused by a lot of unnessesary changes in the background.",
+    "step6_per_metric_best_valid": "C-Min-Edit, alibi-Proto-CF",
+    "step6_per_metric_best_im1": "alibi-Proto-CF",
+    "step6_per_metric_best_implaus": "alibi-Proto-CF",
+    "step6_per_metric_best_l2": "PIECE",
+    "step7_post_confidence": 95,
+    "step7_change_answer": "No",
+    "step7_final_thoughts": "No, I wan't really surprised by the metric (scores). I base my opinion on all of the 7's I've seen and look how much they look like what I know to be a 7, and the metrics do exactly the same by looking at the (distribution of) the 7's in the dataset.\nI found it interesting that the best overall method also changed the background, because I'd assume that this could also make it more likely to also create a nonsense digit, but still it performed best."
+  }
+]
 ]
