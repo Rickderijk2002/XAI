@@ -23,9 +23,9 @@ number-sections: true
 bibliography: My_Library.bib
 ---
 
-# 1 Introduction
+# Introduction
 
-## 1.1 Assignment Description
+## Assignment Description
 
 This project is conducted within the course *Interactive and Explainable AI Design* and focuses on Assignment B, which involves designing and evaluating an interactive dashboard for exploring counterfactual explanations. The assignment is situated in the domain of explainable artificial intelligence (XAI), where the goal is not only to provide explanations for model predictions, but also to understand how users interpret and interact with these explanations in practice [@guidotti2018survey].
 
@@ -37,7 +37,7 @@ Importantly, these evaluation dimensions do not always align. A counterfactual m
 
 The objective of this assignment is therefore twofold. First, to design a dashboard that enables users to explore and compare counterfactual explanations in a structured and intuitive way. Second, to evaluate how users interpret these explanations and whether their judgments align with objective evaluation metrics.
 
-## 1.2 Design Debrief
+## Design Debrief
 
 The goal of this project is to design an interactive dashboard that reveals and helps analyse the gap between human intuition and model-based evaluation of counterfactual explanations. The primary target users are data science students, with machine learning researchers as a secondary audience. These users are assumed to have a basic understanding of model evaluation, but may still experience difficulty in interpreting counterfactual explanations consistently.
 
@@ -57,9 +57,9 @@ Based on this motivation, the central research question guiding this project is:
 *To what extent do human judgments of counterfactual explanation quality align with objective evaluation metrics, and how can interface design reveal or reduce discrepancies between the two?*
 :::
 
-# 2 Empathize Phase
+# Empathize Phase
 
-## 2.1 Methods Used
+## Methods Used
 
 The goal of the empathize phase was to develop a well-grounded understanding of both the problem space and the intended user group. In line with the design thinking framework, this phase focuses on uncovering user needs, identifying pain points, and understanding how current approaches to counterfactual explanations may limit effective interpretation.
 
@@ -109,7 +109,7 @@ This inspection suggested that different methods can produce substantially diffe
 
 These observations indicate that trade-offs between different evaluation dimensions are present, and that explanation quality cannot be fully captured by a single criterion.
 
-## 2.2 Results and Insights
+## Results and Insights
 
 The combination of methods resulted in a set of key insights that informed the subsequent design phases.
 
@@ -157,7 +157,7 @@ Without guidance, users may:
 -   misinterpret evaluation metrics
 -   draw inconsistent conclusions
 
-## 2.3 Transition to Define Phase
+## Transition to Define Phase
 
 The empathize phase highlights a consistent pattern: users experience difficulty interpreting counterfactual explanations, particularly due to the misalignment between visual intuition and objective evaluation metrics. This challenge is reinforced by the way information is presented and by the complexity of comparing multiple explanations.
 
@@ -169,9 +169,9 @@ How to design an interface that reveals and supports the interpretation of the g
 
 This forms the basis for the define phase, where the problem will be formalized into a clear problem statement.
 
-# 3 Define Phase
+# Define Phase
 
-## 3.1 Problem Statement
+## Problem Statement
 
 The empathize phase revealed a consistent challenge: users experience difficulty in interpreting counterfactual explanations due to the misalignment between visual intuition and objective evaluation metrics. While users tend to rely on visual similarity and perceived plausibility, model-based metrics such as validity may indicate a different assessment of explanation quality.
 
@@ -183,7 +183,7 @@ This leads to the following problem statement:
 
 This problem is directly grounded in the insights from the empathize phase, where users expressed uncertainty about how to interpret metrics, difficulty in comparing multiple explanations, and a tendency to rely on intuition without validation.
 
-## 3.2 Target User
+## Target User
 
 The primary target user for this project is a data science student. These users typically have a foundational understanding of machine learning models and evaluation concepts, but limited experience with interpreting explanation quality, especially in situations where multiple evaluation criteria are involved.
 
@@ -197,7 +197,7 @@ A secondary user group consists of machine learning researchers. While these use
 
 The design primarily focuses on supporting data science students, while remaining relevant for more advanced users.
 
-## 3.3 Focus for Ideation
+## Focus for Ideation
 
 Based on the insights from the empathize phase, the design focus is narrowed to one central challenge: making the gap between human intuition and model-based evaluation visible and interpretable.
 
@@ -219,9 +219,9 @@ This leads to the following design direction:
 
 This direction forms the basis for the ideation phase, where multiple design concepts will be explored to determine how such a guided interaction can be implemented effectively.
 
-# 4 Ideation Phase
+# Ideation Phase
 
-## 4.1 Divergence: Generating Design Concepts
+## Divergence: Generating Design Concepts
 
 Following the define phase, the ideation phase focused on exploring a broad range of possible solutions to address the central challenge: making the gap between human intuition and model-based evaluation visible and interpretable.
 
@@ -337,7 +337,7 @@ Limitations:
 Relation to the core problem:\
 This concept directly addresses the central challenge by making the relationship between intuition and metrics explicit. It operationalizes the gap identified in the empathize phase and creates a measurable interaction.
 
-## 4.2 COCD Box: Structuring Divergence and Convergence
+## COCD Box: Structuring Divergence and Convergence
 
 To support convergence, the generated ideas were mapped onto a COCD (Creative Problem Solving) box, positioning them based on feasibility and originality.
 
@@ -358,7 +358,7 @@ Two concepts, *The Tension Map* and *The Guided Task Game*, were placed in the â
 
 The distribution of ideas indicates that initial ideation tended to gravitate toward familiar solutions. The COCD mapping made it possible to explicitly identify and select concepts that introduce meaningful innovation while remaining implementable.
 
-## 4.3 Convergence: Selection of Design Direction
+## Convergence: Selection of Design Direction
 
 Based on the COCD analysis and the insights from the empathize and define phases, the *Guided Task Mode Dashboard* was selected as the primary design direction.
 
@@ -382,7 +382,7 @@ The guided task mode makes the central problem measurable. By capturing both use
 
 Alternative concepts either prioritize exploration or automate evaluation, but do not make this relationship explicit.
 
-## 4.4 Design Direction
+## Design Direction
 
 The selected design direction can be summarized as follows:
 
@@ -488,7 +488,7 @@ The Guided Task Mode was developed as a replacement to address the limitations o
 
 **Data log:** `game_log.json` (auto-generated, appended to after each completed session)
 
-# Test Phase (4 pages)
+# Test Phase
 
 ## Research Question
 
@@ -741,7 +741,7 @@ longer visible: *"it would be nice to be able to compare my choices with the bes
 one â€” now I have to rely on my memory and I don't fully remember how they
 differed."* Damian made the same observation. The Step 5 ranking screen should
 display a compact image grid alongside the ranking table, reusing the image grid
-component already present in Step 3 (see @fig-step3 in the appendix).
+component already present in Step 3 (see @fig-game-fv in the appendix).
 
 ### Reduce information density and introduce hover explanations
 
@@ -769,7 +769,7 @@ steps, ensuring that human perception is always recorded before model outputs ar
 revealed (see @fig-visual-inspec-fv and @fig-user-pred-fv in the appendix). The
 Mini Game and Leaderboard extend this by providing repeated exposure to validity
 judgments in a lower-stakes environment, reinforcing the model-centric definition
-of validity through practice rather than instruction (see @fig-minigame in the
+of validity through practice rather than instruction (see @fig-minigame-homescreen and @fig-leaderboard in the
 appendix).
 
 The core XAI insight that emerged from testing the prototype is that the gap
@@ -802,7 +802,7 @@ dashboard not only as a design artifact but as an instrument for investigating
 how framing, sequencing, and interaction design shape the way users reason about
 explanation quality.
 
-# Design Archive Description (0.5 page)
+# Design Archive Description
 
 ## Archive Overview
 
@@ -817,6 +817,9 @@ At the same time, this archived version had usability limitations that motivated
 The newer frontend integrated in this report addresses these issues directly. We added clearer explanations of each metric (what it represents, why it matters, and how to interpret it), improved page-level instructions, and introduced repeated context and information cues so users consistently understand what they need to do on each screen. In that sense, the V1 archive remains an important bridge: it established the core interaction logic and data pipeline, while also making clear which design improvements were necessary for a better user experience. For the full prototype archive see figures 1 to 8 in @sec-appendix-archive-prototype
 
 # References
+
+::: {#refs}
+:::
 
 # Appendix Final Version Prototype {#sec-appendix-final-version-prototype}
 
@@ -834,7 +837,7 @@ The newer frontend integrated in this report addresses these issues directly. We
 
 ![Actual metric 2](images/Final%20prototype/Actual%20Metrics%202.png){#fig-actual-2}
 
-![Actual metric 3](images/Final%20prototype/Actual%20Metrics%20FV%203.png){#fig-actual metric 3}
+![Actual metric 3](images/Final%20prototype/Actual%20Metrics%20FV%203.png){#fig-actual-metric-3}
 
 ![Explanation & Feedback FV 1](images/Final%20prototype/Explanation_Feedback%201.png)
 
@@ -850,7 +853,7 @@ The newer frontend integrated in this report addresses these issues directly. We
 
 ![CF Thoughts 2](images/Final%20prototype/Confidence_final_thoughts%202.png)
 
-![Mini-Game Homescreen](images/Final%20prototype/Mini%20Game%20homescreen.png)
+![Mini-Game Homescreen](images/Final%20prototype/Mini%20Game%20homescreen.png){#fig-minigame-homescreen}
 
 ![Minigame Information](images/Final%20prototype/Minigame.png)
 
@@ -860,7 +863,7 @@ The newer frontend integrated in this report addresses these issues directly. We
 
 ![Mini-Game Choice](images/Final%20prototype/Minigame%20(3).png)
 
-![Leaderbord](images/Final%20prototype/Leaderbord.png)
+![Leaderboard](images/Final%20prototype/Leaderbord.png){#fig-leaderboard}
 
 # Appendix Archive Prototype {#sec-appendix-archive-prototype}
 
