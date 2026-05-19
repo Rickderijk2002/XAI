@@ -474,20 +474,6 @@ Only MNIST is used in this study, as handwritten digit recognition provides a si
 
 For the full Prototype final version screenshots we reference to the appendix @sec-appendix-final-version-prototype
 
-### Archive
-
-**Earlier prototype version**
-
-The dashboard was initially built as a simpler Guess Mode interface in which participants were shown one CF at a time and asked only whether they thought it was valid (yes or no), with their response immediately compared against the actual correctness score. This version collected minimal data and did not capture the reasoning behind judgments or allow comparison across methods within the same case.
-
-*\[Screenshot: Earlier Guess Mode interface\]*
-
-The Guided Task Mode was developed as a replacement to address the limitations of this approach: the binary guess format did not allow measurement of plausibility perception, did not capture why participants made their choices, and did not enable cross-method comparison within a single case, all of which are necessary to answer the research question with depth.
-
-**Dashboard file:** `app.py` (run with `streamlit run app.py`)
-
-**Data log:** `game_log.json` (auto-generated, appended to after each completed session)
-
 # Test Phase
 
 ## Research Question
@@ -532,7 +518,7 @@ Max treated the comparison as purely visual and picked Alibi Proto CF because a 
 
 ### Participant 2: Andres
 
-Andres showed early friction with what validity and CF meant in the interface, slider granularity, and metric direction (including implausibility versus his plausibility estimate). He also reported contradictory-feeling success messaging versus an invalid method in the same flow, and difficulty comparing recap numbers to earlier estimates. On the core distinction between his judgment on the image and what the model predicts, he answered: “Not to be honest. No. I didn't get that part.” He asked for clearer method definitions and a slightly more explicit study goal early. If you also cite `guided_task_results.json`, reconcile any mismatch between that log row and this brief by confirming it is the same session.
+Andres showed early friction with what validity and CF meant in the interface, slider granularity, and metric direction (including implausibility versus his plausibility estimate). He also reported contradictory-feeling success messaging versus an invalid method in the same flow, and difficulty comparing recap numbers to earlier estimates. On the core distinction between his judgment on the image and what the model predicts, he answered: “Not to be honest. No. I didn't get that part.” He asked for clearer method definitions and a slightly more explicit study goal early.
 
 ### Participant 3: Patryk
 
@@ -560,44 +546,15 @@ Finally, assistance was present in every session. Facilitators clarified definit
 
 ## Conclusions from User Testing
 
-The central research question of this project asks to what extent human judgments
-of counterfactual explanation quality align with objective evaluation metrics, and
-how interface design can reveal or reduce discrepancies between the two. The
-findings from five user testing sessions provide a clear and consistent answer:
-human judgment and objective metrics frequently diverge, and this divergence is
-systematic rather than coincidental. At the same time, the structured interface
-succeeded in making this gap visible, though not always without facilitation.
+The central research question of this project asks to what extent human judgments of counterfactual explanation quality align with objective evaluation metrics, and how interface design can reveal or reduce discrepancies between the two. The findings from five user testing sessions provide a clear and consistent answer: human judgment and objective metrics frequently diverge, and this divergence is systematic rather than coincidental. At the same time, the structured interface succeeded in making this gap visible, though not always without facilitation.
 
 ### The validity misconception was universal
 
-The most consistent finding across all five sessions was that participants
-interpreted validity as a visual question rather than a model-level outcome.
-Instead of asking "did the model predict the target class?", every participant
-initially asked some version of "does this image look like the target digit?"
+The most consistent finding across all five sessions was that participants interpreted validity as a visual question rather than a model-level outcome. Instead of asking "did the model predict the target class?", every participant initially asked some version of "does this image look like the target digit?"
 
-Esmee made this explicit when she asked *"but does the model think this is a
-three? How do I know what the model thinks this is?"* before completing Step 2.
-She later reflected: *"I thought the model would not say it was a three, but it
-actually did"* identifying this as the single most surprising moment in her
-session. Patryk, who had prior XAI experience, flagged the same issue from a
-design perspective: *"validity is binary — why then did I get a slider?"* Max
-dismissed the metrics as irrelevant to his judgment entirely: *"Yes, purely
-visual. The metrics do not really interest me."* He chose Alibi-Proto-CF because
-*"you could very clearly see a digit in that method, and not in the others"* — a
-purely visual criterion that diverged from the model's top-ranked method,
-C-Min-Edit. Andres summarised the core issue most directly in the post-session
-interview: *"Was it clear to you the difference between your judgment and what
-the model actually predicts? Not to be honest. No. I didn't get that part."*
+Esmee made this explicit when she asked *"but does the model think this is a three? How do I know what the model thinks this is?"* before completing Step 2. She later reflected: *"I thought the model would not say it was a three, but it actually did"* identifying this as the single most surprising moment in her session. Patryk, who had prior XAI experience, flagged the same issue from a design perspective: *"validity is binary — why then did I get a slider?"* Max dismissed the metrics as irrelevant to his judgment entirely: *"Yes, purely visual. The metrics do not really interest me."* He chose Alibi-Proto-CF because *"you could very clearly see a digit in that method, and not in the others"* — a purely visual criterion that diverged from the model's top-ranked method, C-Min-Edit. Andres summarised the core issue most directly in the post-session interview: *"Was it clear to you the difference between your judgment and what the model actually predicts? Not to be honest. No. I didn't get that part."*
 
-Importantly, while all five participants matched the direction of the actual
-validity outcome, this alignment was not the result of correctly understanding
-validity as a model-level binary outcome. @tbl-validity shows each participant's
-Step 2 estimate alongside the actual model value. Direction matching ranged from
-confident and visual (Max, confidence 80%) to admitted guessing (Andres: *"it
-was pure guessing"*) to post-hoc correction (Esmee: *"I should actually have
-made the validity estimate lower"*). This pattern suggests that surface-level
-alignment between estimates and outcomes can mask a deeper conceptual
-misunderstanding.
+Importantly, while all five participants matched the direction of the actual validity outcome, this alignment was not the result of correctly understanding validity as a model-level binary outcome. @tbl-validity shows each participant's Step 2 estimate alongside the actual model value. Direction matching ranged from confident and visual (Max, confidence 80%) to admitted guessing (Andres: *"it was pure guessing"*) to post-hoc correction (Esmee: *"I should actually have made the validity estimate lower"*). This pattern suggests that surface-level alignment between estimates and outcomes can mask a deeper conceptual misunderstanding.
 
 ```{r}
 #| label: tbl-validity
@@ -615,7 +572,7 @@ validity_table <- data.frame(
   `Actual Validity` = c(1, 0, 1, 0, 1),
   `Direction Correct` = c("Yes", "Yes", "Yes", "Yes", "Yes"),
   `Reasoning Basis` = c(
-    "Purely visual — chose method with most visible digit",
+    "Purely visual, chose method with most visible digit",
     "Visual + confused by continuous slider vs binary outcome",
     "Admitted pure guessing, matched by coincidence",
     "Low confidence, needed facilitator clarification",
@@ -634,78 +591,31 @@ kable(validity_table, booktabs = TRUE, align = c("l","c","c","c","l")) |>
 
 ### Metric terminology created persistent confusion
 
-A second consistent pattern was confusion around the directionality and meaning
-of plausibility-related metrics. Damian flagged an apparent contradiction in the
-copy: *"Implausibility — higher is bad. But wait, it also says high plausibility
-is bad — that doesn't add up."* He also found IM1 ambiguous: *"it does look like
-a number but more like a 0, not a 7 — it wasn't clear which comparison was being
-made."* Patryk echoed this after the metric reveal: *"I'm not really sure where
-those metrics are coming from. At first glance it doesn't really look very clear
-or intuitive."*
+A second consistent pattern was confusion around the directionality and meaning of plausibility-related metrics. Damian flagged an apparent contradiction in the copy: *"Implausibility — higher is bad. But wait, it also says high plausibility is bad — that doesn't add up."* He also found IM1 ambiguous: *"it does look like a number but more like a 0, not a 7 — it wasn't clear which comparison was being made."* Patryk echoed this after the metric reveal: *"I'm not really sure where those metrics are coming from. At first glance it doesn't really look very clear or intuitive."*
 
-Esmee was more forgiving, noting that the plain-language explanation sentences
-helped her: *"the main reason why I agree with it is not because of this number,
-because I do not really know what that means, but because it says somewhat
-plausible, but not ideal — that is what makes me think yes, I agree."* This
-suggests that while the numerical scores were difficult to interpret, the
-qualitative labels partially compensated, though not consistently across all
-participants.
+Esmee was more forgiving, noting that the plain-language explanation sentences helped her: *"the main reason why I agree with it is not because of this number, because I do not really know what that means, but because it says somewhat plausible, but not ideal — that is what makes me think yes, I agree."* This suggests that while the numerical scores were difficult to interpret, the qualitative labels partially compensated, though not consistently across all participants.
 
 ### Information density and navigation reduced comprehension
 
-A third pattern concerned the physical layout of the dashboard. Max explicitly
-requested hover-based explanations: *"if I want to know something now I have to
-scroll up, and then by the time I scroll back down I have already forgotten it."*
-Patryk skipped large portions of text when the flow became dense and noted the
-Control+Enter requirement after text entry as unnecessary friction: *"having to
-control-enter click after filling in text boxes is some extra effort."* Andres
-felt lost in purpose despite finding the sequence clear: *"I didn't know exactly
-what you were studying, what was the question about, or where you want to go."*
-These observations point to a gap between the information available in the
-interface and the information participants actually absorbed and retained.
+A third pattern concerned the physical layout of the dashboard. Max explicitly requested hover-based explanations: *"if I want to know something now I have to scroll up, and then by the time I scroll back down I have already forgotten it."* Patryk skipped large portions of text when the flow became dense and noted the Control+Enter requirement after text entry as unnecessary friction: *"having to control-enter click after filling in text boxes is some extra effort."* Andres felt lost in purpose despite finding the sequence clear: *"I didn't know exactly what you were studying, what was the question about, or where you want to go."* These observations point to a gap between the information available in the interface and the information participants actually absorbed and retained.
 
 ### The structured flow was accepted but insufficient alone
 
-Despite these difficulties, the step-by-step structure was broadly accepted. No
-participant rejected the guided progression, and several noted in retrospect that
-the order felt logical. For Esmee, understanding came only through the mini game:
-*"when it went wrong two times, that was when I started thinking — okay, I also
-need to look at it from a metric perspective."* This is a meaningful finding:
-the guided task mode created the conditions for the gap to become visible, but
-the mini game provided the moment of realisation. However, facilitator assistance
-was required in every session, which limits how much can be attributed to the
-interface alone.
+Despite these difficulties, the step-by-step structure was broadly accepted. No participant rejected the guided progression, and several noted in retrospect that the order felt logical. For Esmee, understanding came only through the mini game: *"when it went wrong two times, that was when I started thinking — okay, I also need to look at it from a metric perspective."* This is a meaningful finding: the guided task mode created the conditions for the gap to become visible, but the mini game provided the moment of realisation. However, facilitator assistance was required in every session, which limits how much can be attributed to the interface alone.
 
 ### Answer to the research question
 
-Taken together, the user testing confirms that human judgment and objective
-evaluation metrics do not reliably align, and that this misalignment is
-predictable: users default to visual realism as their primary criterion, while
-the model evaluates pixel-level prediction correctness. Surface-level direction
-matching between user estimates and model outcomes does not indicate
-understanding. The dashboard succeeded in making this gap observable within a
-single session, but the current implementation relies too heavily on facilitator
-support and plain-language labels to bridge the conceptual gap independently.
+Taken together, the user testing confirms that human judgment and objective evaluation metrics do not reliably align, and that this misalignment is predictable: users default to visual realism as their primary criterion, while the model evaluates pixel-level prediction correctness. Surface-level direction matching between user estimates and model outcomes does not indicate understanding. The dashboard succeeded in making this gap observable within a single session, but the current implementation relies too heavily on facilitator support and plain-language labels to bridge the conceptual gap independently.
 
 ## Improvement Recommendations
 
-The following recommendations are derived directly from the patterns observed
-across the five user testing sessions. Each is grounded in specific observed
-behaviour and scoped to be actionable in a next design iteration, ordered by
-severity and frequency.
+The following recommendations are derived directly from the patterns observed across the five user testing sessions. Each is grounded in specific observed behaviour and scoped to be actionable in a next design iteration, ordered by severity and frequency.
 
 ### Front-load and reframe validity as a binary model outcome
 
-The most impactful change is to introduce the correct definition of validity
-before the first evaluation step, and to replace the continuous validity slider
-with a binary yes/no radio button. All five participants treated validity as a
-visual question during Steps 1 and 2 despite the onboarding explanation being
-present, and Patryk identified the slider itself as a design contradiction:
-*"validity is binary — why then did I get a slider?"* Esmee later corrected her
-own estimate precisely because she realised the scale had misled her reasoning.
+The most impactful change is to introduce the correct definition of validity before the first evaluation step, and to replace the continuous validity slider with a binary yes/no radio button. All five participants treated validity as a visual question during Steps 1 and 2 despite the onboarding explanation being present, and Patryk identified the slider itself as a design contradiction: *"validity is binary — why then did I get a slider?"* Esmee later corrected her own estimate precisely because she realised the scale had misled her reasoning.
 
-The redesign should add a dedicated framing screen before Step 1 with an explicit
-contrast:
+The redesign should add a dedicated framing screen before Step 1 with an explicit contrast:
 
 ::: {.callout-note appearance="simple"}
 **Human question:** does this image look convincing to you?
@@ -715,92 +625,29 @@ contrast:
 These are two different questions. You will answer both, separately.
 :::
 
-The Step 2 validity input should then be replaced with a binary yes/no radio
-button. The plausibility slider can remain continuous, as plausibility is
-genuinely a matter of degree. This separation also makes the conceptual
-distinction between the two metrics more visible in the interface itself.
+The Step 2 validity input should then be replaced with a binary yes/no radio button. The plausibility slider can remain continuous, as plausibility is genuinely a matter of degree. This separation also makes the conceptual distinction between the two metrics more visible in the interface itself.
 
 ### Clarify metric directionality and terminology
 
-Damian's observation that plausibility and implausibility seemed contradictory
-reflects a copy problem that appeared in four of the five sessions. Two concrete
-fixes address this. First, add a consistent directional indicator next to each
-metric label throughout the interface, for example a downward arrow with *lower
-is better* wherever IM1 or implausibility appear. Second, replace the term
-*implausibility score* with *unnaturalness score*, which aligns with the
-plain-language description already used in onboarding and reduces conflation with
-plausibility. Additionally, IM1 should explicitly state whether *realistic*
-refers to any plausible digit or specifically the target class, directly
-addressing Damian's observation: *"it does look like a number but more like a 0,
-not a 7 — it wasn't clear which comparison was being made."*
+Damian's observation that plausibility and implausibility seemed contradictory reflects a copy problem that appeared in four of the five sessions. Two concrete fixes address this. First, add a consistent directional indicator next to each metric label throughout the interface, for example a downward arrow with *lower is better* wherever IM1 or implausibility appear. Second, replace the term *implausibility score* with *unnaturalness score*, which aligns with the plain-language description already used in onboarding and reduces conflation with plausibility. Additionally, IM1 should explicitly state whether *realistic* refers to any plausible digit or specifically the target class, directly addressing Damian's observation: *"it does look like a number but more like a 0, not a 7 — it wasn't clear which comparison was being made."*
 
 ### Show counterfactual images alongside the ranking in Step 5
 
-Patryk noted that when the method ranking appeared in Step 5, the images were no
-longer visible: *"it would be nice to be able to compare my choices with the best
-one — now I have to rely on my memory and I don't fully remember how they
-differed."* Damian made the same observation. The Step 5 ranking screen should
-display a compact image grid alongside the ranking table, reusing the image grid
-component already present in Step 3 (see @fig-game-fv in the appendix).
+Patryk noted that when the method ranking appeared in Step 5, the images were no longer visible: *"it would be nice to be able to compare my choices with the best one — now I have to rely on my memory and I don't fully remember how they differed."* Damian made the same observation. The Step 5 ranking screen should display a compact image grid alongside the ranking table, reusing the image grid component already present in Step 3 (see @fig-game-fv in the appendix).
 
 ### Reduce information density and introduce hover explanations
 
-Max, Patryk, and Damian all requested shorter on-screen text and inline
-explanations that do not require scrolling. Max suggested: *"make sure you can
-hover over a metric and then get a short explanation."* Two structural changes
-address this: replace long explanation blocks with collapsed expandable sections,
-and add hover tooltips to each metric label showing a one-sentence plain-language
-interpretation on demand. These changes reduce cognitive load without removing
-content that less experienced participants like Esmee found helpful. The Next
-button should additionally activate automatically once the required text field
-contains input, removing the dependency on the Control+Enter affordance that
-Patryk flagged as unnecessary friction.
+Max, Patryk, and Damian all requested shorter on-screen text and inline explanations that do not require scrolling. Max suggested: *"make sure you can hover over a metric and then get a short explanation."* Two structural changes address this: replace long explanation blocks with collapsed expandable sections, and add hover tooltips to each metric label showing a one-sentence plain-language interpretation on demand. These changes reduce cognitive load without removing content that less experienced participants like Esmee found helpful. The Next button should additionally activate automatically once the required text field contains input, removing the dependency on the Control+Enter affordance that Patryk flagged as unnecessary friction.
 
 ## Final Design Concept and XAI Insights
 
-The final design concept is a web-based interactive dashboard built in Streamlit
-that guides data science students through a structured evaluation of counterfactual
-explanations (see @fig-homescreen-1 in the appendix). The dashboard was designed
-around the central insight from the empathize phase: users cannot independently
-make the gap between their visual intuition and objective model metrics explicit
-without structured support. The Guided Task Mode addresses this directly by
-separating intuitive judgment from metric-based evaluation across seven locked
-steps, ensuring that human perception is always recorded before model outputs are
-revealed (see @fig-visual-inspec-fv and @fig-user-pred-fv in the appendix). The
-Mini Game and Leaderboard extend this by providing repeated exposure to validity
-judgments in a lower-stakes environment, reinforcing the model-centric definition
-of validity through practice rather than instruction (see @fig-minigame-homescreen and @fig-leaderboard in the
-appendix).
+The final design concept is a web-based interactive dashboard built in Streamlit that guides data science students through a structured evaluation of counterfactual explanations (see @fig-homescreen-1 in the appendix). The dashboard was designed around the central insight from the empathize phase: users cannot independently make the gap between their visual intuition and objective model metrics explicit without structured support. The Guided Task Mode addresses this directly by separating intuitive judgment from metric-based evaluation across seven locked steps, ensuring that human perception is always recorded before model outputs are revealed (see @fig-visual-inspec-fv and @fig-user-pred-fv in the appendix). The Mini Game and Leaderboard extend this by providing repeated exposure to validity judgments in a lower-stakes environment, reinforcing the model-centric definition of validity through practice rather than instruction (see @fig-minigame-homescreen and @fig-leaderboard in the appendix).
 
-The core XAI insight that emerged from testing the prototype is that the gap
-between human judgment and objective evaluation metrics is not primarily a
-knowledge gap but a framing gap. All five participants entered the evaluation
-steps with a visual definition of validity rather than a model-centric one,
-despite the onboarding explanation being present. This finding suggests that the
-way validity is framed in XAI tools matters as much as whether it is explained
-at all. Showing the metric without first establishing the correct mental model
-causes users to assimilate new information into an existing but incorrect
-framework, producing estimates that appear aligned on the surface but are
-conceptually disconnected from the model outcome (see @fig-actual-1 in the
-appendix).
+The core XAI insight that emerged from testing the prototype is that the gap between human judgment and objective evaluation metrics is not primarily a knowledge gap but a framing gap. All five participants entered the evaluation steps with a visual definition of validity rather than a model-centric one, despite the onboarding explanation being present. This finding suggests that the way validity is framed in XAI tools matters as much as whether it is explained at all. Showing the metric without first establishing the correct mental model causes users to assimilate new information into an existing but incorrect framework, producing estimates that appear aligned on the surface but are conceptually disconnected from the model outcome (see @fig-actual-1 in the appendix).
 
-A second XAI insight concerns the role of comparison in explanation evaluation.
-When participants were asked in Step 3 to select the best method from all five
-simultaneously, every participant relied on visual realism as their sole
-criterion. None spontaneously applied the validity or plausibility dimensions
-they had just estimated in Step 2. This suggests that even when users have
-recently engaged with evaluation metrics, comparison tasks default to visual
-heuristics unless the interface explicitly structures the comparison around the
-metrics themselves (see @fig-game-fv in the appendix).
+A second XAI insight concerns the role of comparison in explanation evaluation. When participants were asked in Step 3 to select the best method from all five simultaneously, every participant relied on visual realism as their sole criterion. None spontaneously applied the validity or plausibility dimensions they had just estimated in Step 2. This suggests that even when users have recently engaged with evaluation metrics, comparison tasks default to visual heuristics unless the interface explicitly structures the comparison around the metrics themselves (see @fig-game-fv in the appendix).
 
-Together these insights extend the existing XAI literature on the gap between
-objective and subjective evaluation. Where prior work by [@doshivelez2017rigorous]
-and [@kaur2020interpreting] established that such a gap exists, the user testing
-conducted with this prototype demonstrates that the gap is robust even within a
-structured interface designed specifically to make it visible. This positions the
-dashboard not only as a design artifact but as an instrument for investigating
-how framing, sequencing, and interaction design shape the way users reason about
-explanation quality.
+Together these insights extend the existing XAI literature on the gap between objective and subjective evaluation. Where prior work by [@doshivelez2017rigorous] and [@kaur2020interpreting] established that such a gap exists, the user testing conducted with this prototype demonstrates that the gap is robust even within a structured interface designed specifically to make it visible. This positions the dashboard not only as a design artifact but as an instrument for investigating how framing, sequencing, and interaction design shape the way users reason about explanation quality.
 
 # Design Archive Description
 
