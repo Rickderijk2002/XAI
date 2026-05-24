@@ -663,6 +663,12 @@ At the same time, this archived version had usability limitations that motivated
 
 The newer frontend integrated in this report addresses these issues directly. We added clearer explanations of each metric (what it represents, why it matters, and how to interpret it), improved page-level instructions, and introduced repeated context and information cues so users consistently understand what they need to do on each screen. In that sense, the V1 archive remains an important bridge: it established the core interaction logic and data pipeline, while also making clear which design improvements were necessary for a better user experience. For the full prototype archive see figures 1 to 8 in @sec-appendix-archive-prototype
 
+# Technology statement students
+
+During the preparation of this work, we used generative AI tools, including ChatGPT, Claude, and Gemini, in order to support language refinement, readability, and consistency checks. The following parts of the assignment were affected by AI tool usage: selected parts of the written report, mainly for wording, structure, and clarity. The design process, research decisions, prototype development, user testing, analysis, and conclusions were carried out by Rick de Rijk, Stefan Vonk, Tycho van Rooij, Thom Verzantvoort, and Gilbert Laanen.
+
+After using these tools, Rick de Rijk, Stefan Vonk, Tycho van Rooij, Thom Verzantvoort, and Gilbert Laanen evaluated the validity of the tool’s outputs, including the sources that generative AI tools have used, and edited the content as needed. As a consequence, Rick de Rijk, Stefan Vonk, Tycho van Rooij, Thom Verzantvoort, and Gilbert Laanen take full responsibility for the content of their work.
+
 # References
 
 ::: {#refs}
